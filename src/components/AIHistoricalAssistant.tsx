@@ -8,6 +8,7 @@ import {
   RefreshCw,
   X
 } from 'lucide-react'
+import Logo from './Logo'
 
 interface Message {
   id: string
@@ -415,10 +416,11 @@ Lưu ý mạnh: Không trả lời các câu hỏi không liên quan đến nộ
       {/* Header */}
       <div className={`bg-gradient-to-r ${currentPersona.color} text-white p-4 flex items-center justify-between`}>
         <div className="flex items-center space-x-3">
-          <img
+          <Logo
             src={currentPersona.avatar}
             alt={currentPersona.name}
-            className="w-10 h-10 rounded-full border-2 border-white"
+            rounded
+            className="border-2 border-white"
           />
           <div>
             <h3 className="font-semibold text-sm">{currentPersona.name}</h3>

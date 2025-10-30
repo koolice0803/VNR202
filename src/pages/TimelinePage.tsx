@@ -11,6 +11,7 @@ import {
   ChevronUp,
   Clock,
 } from 'lucide-react'
+import IconBadge from '../components/IconBadge'
 import { timelineEvents } from '../data/timelineData'
 import type { TimelineEvent } from '../types'
 
@@ -21,9 +22,7 @@ const TimelinePage = () => {
   const categories = [
     { value: 'all', label: 'Tất cả', color: 'bg-gray-500' },
     { value: 'political', label: 'Chính trị', color: 'bg-blue-500' },
-    { value: 'military', label: 'Quân sự', color: 'bg-red-500' },
-    { value: 'social', label: 'Xã hội', color: 'bg-green-500' },
-    { value: 'international', label: 'Quốc tế', color: 'bg-purple-500' }
+    { value: 'military', label: 'Quân sự', color: 'bg-red-500' }
   ]
 
   const filteredEvents = selectedCategory === 'all'
@@ -62,14 +61,17 @@ const TimelinePage = () => {
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-800 text-sm font-medium mb-6">
             <Clock className="w-4 h-4 mr-2" />
-            Dòng thời gian lịch sử
+            Sản phẩm môn học Lịch sử Đảng Cộng sản Việt Nam
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            <span className="text-gradient">Tư tưởng Hồ Chí Minh</span>
+          <h1 className="text-4xl md:text-6xl font-extrabold text-[#6073f6] mb-4">
+            CÁCH MẠNG THÁNG 8 NĂM 1945
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Theo dõi các mốc quan trọng trong quá trình hình thành và phát triển
-            tư tưởng độc lập dân tộc và chủ nghĩa xã hội của Chủ tịch Hồ Chí Minh.
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
+            Mùa thu lịch sử – Khi dân tộc Việt Nam đứng lên giành độc lập!
+          </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Khám phá hành trình vĩ đại đưa dân tộc Việt Nam từ thân phận nô lệ đến tự do,
+            dưới ngọn cờ của Đảng Cộng sản Việt Nam và Chủ tịch Hồ Chí Minh.
           </p>
         </motion.div>
 
@@ -112,13 +114,13 @@ const TimelinePage = () => {
         {/* Timeline */}
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 to-purple-600 rounded-full shadow-lg"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 to-purple-600 rounded-full shadow-lg"></div>
 
           {/* Animated timeline markers */}
-          <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 top-0">
+          <div className="absolute left-1/2 transform -translate-x-1/2 top-0">
             <div className="w-4 h-4 bg-blue-500 rounded-full -translate-x-1/2 pulse-glow"></div>
           </div>
-          <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 bottom-0">
+          <div className="absolute left-1/2 transform -translate-x-1/2 bottom-0">
             <div className="w-4 h-4 bg-purple-600 rounded-full -translate-x-1/2 pulse-glow"></div>
           </div>
 
@@ -142,7 +144,7 @@ const TimelinePage = () => {
                     layout
                   >
                     {/* Timeline Dot */}
-                    <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 z-10">
+                    <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
                       <div className={`w-6 h-6 rounded-full bg-gradient-to-br ${getCategoryColor(event.category)} border-4 border-white shadow-lg flex items-center justify-center timeline-dot-animated`}></div>
                     </div>
 
@@ -162,11 +164,10 @@ const TimelinePage = () => {
                           <div className="flex items-start justify-between mb-4">
                             <div className="flex items-center space-x-3">
                               <motion.div
-                                className={`w-10 h-10 rounded-lg bg-gradient-to-br ${getCategoryColor(event.category)} flex items-center justify-center shadow-md`}
-                                whileHover={{ scale: 1.1, rotate: 5 }}
-                                transition={{ type: "spring", stiffness: 400 }}
+                                whileHover={{ scale: 1.05, rotate: 3 }}
+                                transition={{ type: 'spring', stiffness: 400 }}
                               >
-                                <Icon className="w-5 h-5 text-white" />
+                                <IconBadge Icon={Icon} size="md" gradient={getCategoryColor(event.category)} />
                               </motion.div>
                               <div>
                                 <div className="text-sm font-medium text-blue-600 mb-1">
@@ -242,8 +243,8 @@ const TimelinePage = () => {
           transition={{ duration: 0.6 }}
         >
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-            Tổng quan giai đoạn 1954-1964
-          </h3>
+              Tổng quan Cách mạng Tháng 8 (1945)
+            </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {categories.slice(1).map((category) => {

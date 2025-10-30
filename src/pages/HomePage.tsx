@@ -1,5 +1,11 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import img1 from '../assets/1.jpg'
+import img2 from '../assets/2.jpg'
+import img3 from '../assets/3.jpg'
+import img4 from '../assets/4.jpg'
+import img5 from '../assets/5.jpg'
+import img6 from '../assets/6.jpg'
 import {
   ArrowRight,
   Calendar,
@@ -39,22 +45,22 @@ const HomePage = () => {
     {
       icon: Target,
       title: 'Mục tiêu nghiên cứu',
-      description: 'Tìm hiểu tư tưởng độc lập dân tộc và chủ nghĩa xã hội của Chủ tịch Hồ Chí Minh'
+      description: 'Hiểu rõ tư tưởng Hồ Chí Minh về độc lập dân tộc gắn liền với chủ nghĩa xã hội là tư tưởng nền tảng cho thắng lợi của Cách mạng Tháng Tám 1945 và con đường phát triển của dân tộc Việt Nam'
     },
     {
       icon: Calendar,
       title: 'Quá trình hình thành',
-      description: 'Từ những năm đầu hoạt động cách mạng đến khi thành lập nước Việt Nam Dân chủ Cộng hòa'
+      description: 'Từ những hoạt động cách mạng đầu tiên của Nguyễn Ái Quốc đầu thế kỷ XX,đến khi Đảng Cộng sản Việt Nam ra đời (1930) và Cách mạng Tháng Tám 1945 thành công, tư tưởng độc lập dân tộc và chủ nghĩa xã hội dần được hình thành và khẳng định qua thực tiễn đấu tranh.'
     },
     {
       icon: Globe,
       title: 'Bối cảnh lịch sử',
-      description: 'Thời kỳ phong trào giải phóng dân tộc và cách mạng xã hội chủ nghĩa thế giới'
+      description: 'Cách mạng Tháng Tám diễn ra trong bối cảnh Chiến tranh thế giới thứ hai đang kết thúc,chủ nghĩa phát xít thất bại, phong trào giải phóng dân tộc bùng nổ mạnh mẽ ở châu Á, châu Phi và Mỹ Latinh — tạo điều kiện thuận lợi cho nhân dân Việt Nam vùng lên giành chính quyền.'
     },
     {
       icon: Users,
       title: 'Ý nghĩa thời đại',
-      description: 'Tác động sâu sắc đến sự nghiệp giải phóng dân tộc và xây dựng chủ nghĩa xã hội'
+      description: 'Thắng lợi của Cách mạng Tháng Tám mở ra kỷ nguyên mới cho dân tộc Việt Nam –kỷ nguyên độc lập, tự do và tiến lên chủ nghĩa xã hội,đồng thời cổ vũ các dân tộc bị áp bức trên thế giới vùng lên đấu tranh giành độc lập.'
     }
   ]
 
@@ -118,7 +124,7 @@ const HomePage = () => {
               className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"
               variants={itemVariants}
             >
-              <span className="text-gradient-solid">TƯ TƯỞNG HỒ CHÍ MINH</span>
+              <span className="text-gradient-solid">CÁCH MẠNG THÁNG 8 NĂM 1945</span>
               <br />
               <motion.span
                 className="text-3xl md:text-4xl text-gray-700"
@@ -126,7 +132,7 @@ const HomePage = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1, duration: 0.8 }}
               >
-                Độc lập dân tộc và Chủ nghĩa xã hội
+               Mùa thu lịch sử – Khi dân tộc Việt Nam đứng lên giành độc lập!
               </motion.span>
             </motion.h1>
 
@@ -134,8 +140,8 @@ const HomePage = () => {
               className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed"
               variants={itemVariants}
             >
-              Khám phá và tìm hiểu tư tưởng vĩ đại của Chủ tịch Hồ Chí Minh về độc lập dân tộc và chủ nghĩa xã hội,
-              với sự hỗ trợ của công nghệ hiện đại và trí tuệ nhân tạo.
+              Khám phá hành trình vĩ đại đưa dân tộc Việt Nam từ thân phận nô lệ đến tự do,
+              dưới ngọn cờ của Đảng Cộng sản Việt Nam và Chủ tịch Hồ Chí Minh.
             </motion.p>
 
             <motion.div
@@ -269,15 +275,15 @@ const HomePage = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Hình ảnh lịch sử
+              Hình ảnh lịch sử – Cách mạng Tháng Tám 1945
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Những hình ảnh đặc trưng về cuộc đời và sự nghiệp của Chủ tịch Hồ Chí Minh
+              Những hình ảnh tiêu biểu về cuộc Tổng khởi nghĩa và sự ra đời của nước Việt Nam Dân chủ Cộng hòa.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Young Ho Chi Minh Image Placeholder */}
+            {/* Tổng khởi nghĩa toàn quốc (Tháng 8/1945) */}
             <motion.div
               className="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift"
               initial={{ opacity: 0, y: 30 }}
@@ -287,26 +293,26 @@ const HomePage = () => {
             >
               <div className="h-48 relative overflow-hidden">
                 <img
-                  src="/images/img-hcm-tre.jpg"
-                  alt="Hồ Chí Minh thời trẻ"
+                  src={img1}
+                  alt="Tổng khởi nghĩa toàn quốc 1945"
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 <div className="absolute bottom-2 left-2 text-white">
                   <Globe className="w-6 h-6 mb-1" />
-                  <p className="text-xs font-semibold">Thời trẻ</p>
+                  <p className="text-xs font-semibold">Tổng khởi nghĩa</p>
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Hồ Chí Minh thời trẻ</h3>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Tổng khởi nghĩa toàn quốc (Tháng 8/1945)</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Hình ảnh Nguyễn Ái Quốc thời trẻ, khi bắt đầu hành trình tìm đường cứu nước
-                  và tiếp xúc với tư tưởng Mác-Lênin tại châu Âu.
+                  Hình ảnh nhân dân cả nước đồng loạt vùng lên giành chính quyền dưới sự lãnh đạo của Đảng Cộng sản Việt Nam.
+                  Tinh thần "Dân tộc Việt Nam vùng dậy tự giải phóng mình" lan tỏa từ Bắc chí Nam.
                 </p>
               </div>
             </motion.div>
 
-            {/* Communist Party Foundation */}
+            {/* Khởi nghĩa giành chính quyền ở Hà Nội – 19/8/1945 */}
             <motion.div
               className="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift"
               initial={{ opacity: 0, y: 30 }}
@@ -316,26 +322,26 @@ const HomePage = () => {
             >
               <div className="h-48 relative overflow-hidden">
                 <img
-                  src="/images/dcs-ra-doi.jpg"
-                  alt="Thành lập Đảng Cộng sản Việt Nam"
+                  src={img2}
+                  alt="Khởi nghĩa giành chính quyền ở Hà Nội 19/8/1945"
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 <div className="absolute bottom-2 left-2 text-white">
                   <Flag className="w-6 h-6 mb-1" />
-                  <p className="text-xs font-semibold">Thành lập Đảng 1930</p>
+                  <p className="text-xs font-semibold">Hà Nội 19/8/1945</p>
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Thành lập Đảng Cộng sản Việt Nam</h3>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Khởi nghĩa giành chính quyền ở Hà Nội – 19/8/1945</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Ngày 3/2/1930, Hồ Chí Minh thành lập Đảng Cộng sản Việt Nam,
-                  đánh dấu sự kết hợp giữa chủ nghĩa yêu nước và chủ nghĩa xã hội.
+                  Quần chúng cách mạng Hà Nội đổ ra đường, chiếm Phủ Khâm sai và các cơ quan trọng yếu của chính quyền bù nhìn,
+                  mở đầu cho thắng lợi trên phạm vi cả nước.
                 </p>
               </div>
             </motion.div>
 
-            {/* Independence Declaration */}
+            {/* Chủ tịch Hồ Chí Minh đọc Tuyên ngôn Độc lập – 2/9/1945 */}
             <motion.div
               className="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift"
               initial={{ opacity: 0, y: 30 }}
@@ -345,7 +351,7 @@ const HomePage = () => {
             >
               <div className="h-48 relative overflow-hidden">
                 <img
-                  src="/images/29.jpg"
+                  src={img3}
                   alt="Tuyên ngôn độc lập 2/9/1945"
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                 />
@@ -356,15 +362,15 @@ const HomePage = () => {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Tuyên ngôn độc lập 2/9/1945</h3>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Chủ tịch Hồ Chí Minh đọc Tuyên ngôn Độc lập – 2/9/1945</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Chủ tịch Hồ Chí Minh đọc Tuyên ngôn độc lập tại Quảng trường Ba Đình,
-                  tuyên bố thành lập nước Việt Nam Dân chủ Cộng hòa.
+                  Tại Quảng trường Ba Đình, Chủ tịch Hồ Chí Minh tuyên bố khai sinh nước Việt Nam Dân chủ Cộng hòa –
+                  mở ra kỷ nguyên mới của độc lập, tự do và hạnh phúc cho dân tộc Việt Nam.
                 </p>
               </div>
             </motion.div>
 
-            {/* Ho Chi Minh with People */}
+            {/* Nhân dân giành chính quyền ở các địa phương */}
             <motion.div
               className="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift"
               initial={{ opacity: 0, y: 30 }}
@@ -374,26 +380,26 @@ const HomePage = () => {
             >
               <div className="h-48 relative overflow-hidden">
                 <img
-                  src="/images/bac-ho-voi-nhan-dan.jpg"
-                  alt="Hồ Chí Minh với nhân dân"
+                  src={img4}
+                  alt="Nhân dân giành chính quyền ở các địa phương"
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 <div className="absolute bottom-2 left-2 text-white">
                   <Users className="w-6 h-6 mb-1" />
-                  <p className="text-xs font-semibold">Bác Hồ với nhân dân</p>
+                  <p className="text-xs font-semibold">Giành chính quyền tại địa phương</p>
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Hồ Chí Minh với nhân dân</h3>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Nhân dân giành chính quyền ở các địa phương</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Hình ảnh Chủ tịch Hồ Chí Minh gần gũi với nhân dân,
-                  thể hiện tư tưởng "Dân là gốc" trong triết lý chính trị của Người.
+                  Từ Bắc Giang, Hải Dương, Hà Tĩnh đến Huế, Sài Gòn – khí thế cách mạng dâng cao,
+                  chính quyền địch lần lượt sụp đổ. Thắng lợi của nhân dân địa phương góp phần tạo nên sức mạnh tổng hợp cho thành công toàn quốc.
                 </p>
               </div>
             </motion.div>
 
-            {/* Ho Chi Minh Portrait */}
+            {/* Ý nghĩa lịch sử & Kết quả */}
             <motion.div
               className="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift"
               initial={{ opacity: 0, y: 30 }}
@@ -403,26 +409,26 @@ const HomePage = () => {
             >
               <div className="h-48 relative overflow-hidden">
                 <img
-                  src="/images/img5.jpg"
-                  alt="Chủ tịch Hồ Chí Minh"
+                  src={img5}
+                  alt="Ý nghĩa lịch sử của Cách mạng Tháng Tám"
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 <div className="absolute bottom-2 left-2 text-white">
                   <Star className="w-6 h-6 mb-1" />
-                  <p className="text-xs font-semibold">Bác Hồ</p>
+                  <p className="text-xs font-semibold">Ý nghĩa lịch sử</p>
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Chủ tịch Hồ Chí Minh</h3>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Ý nghĩa lịch sử của Cách mạng Tháng Tám</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Chân dung Chủ tịch Hồ Chí Minh - người sáng lập ra tư tưởng độc lập dân tộc
-                  gắn liền với chủ nghĩa xã hội ở Việt Nam.
+                  Cách mạng Tháng Tám chấm dứt ách thống trị hơn 80 năm của thực dân – phong kiến,
+                  mở ra kỷ nguyên độc lập dân tộc và chủ nghĩa xã hội, đồng thời cổ vũ phong trào giải phóng dân tộc trên thế giới.
                 </p>
               </div>
             </motion.div>
 
-            {/* Ho Chi Minh Thought Legacy */}
+            {/* Tầm quan trọng & Nguyên nhân */}
             <motion.div
               className="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift"
               initial={{ opacity: 0, y: 30 }}
@@ -432,21 +438,21 @@ const HomePage = () => {
             >
               <div className="h-48 relative overflow-hidden">
                 <img
-                  src="/images/di-san-ho-chi-minh.jpg"
-                  alt="Di sản tư tưởng Hồ Chí Minh"
+                  src={img6}
+                  alt="Tầm quan trọng của Cách mạng Tháng Tám"
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 <div className="absolute bottom-2 left-2 text-white">
                   <Heart className="w-6 h-6 mb-1" />
-                  <p className="text-xs font-semibold">Di sản tư tưởng</p>
+                  <p className="text-xs font-semibold">Tầm quan trọng</p>
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Di sản tư tưởng Hồ Chí Minh</h3>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Tầm quan trọng của Cách mạng Tháng Tám</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Tư tưởng Hồ Chí Minh tiếp tục là kim chỉ nam cho sự nghiệp
-                  xây dựng và bảo vệ Tổ quốc Việt Nam xã hội chủ nghĩa.
+                  Khẳng định vai trò lãnh đạo của Đảng Cộng sản Việt Nam và minh chứng cho sức mạnh đại đoàn kết toàn dân tộc.
+                  Cách mạng Tháng Tám trở thành bài học lịch sử về nắm bắt thời cơ cách mạng.
                 </p>
               </div>
             </motion.div>
@@ -493,7 +499,7 @@ const HomePage = () => {
                   <div>
                     <h3 className="text-lg font-bold text-gray-900 mb-2">AI Chuyên gia tư tưởng</h3>
                     <p className="text-gray-600 text-sm">
-                      Trò chuyện với AI được huấn luyện chuyên sâu về tư tưởng Hồ Chí Minh,
+                      Trò chuyện với AI được huấn luyện chuyên sâu về cuộc cách mạng tháng 8,
                       cung cấp thông tin chính xác và khách quan về di sản tư tưởng vĩ đại
                     </p>
                   </div>
@@ -509,7 +515,7 @@ const HomePage = () => {
                     <h3 className="text-lg font-bold text-gray-900 mb-2">Kiến thức phong phú</h3>
                     <p className="text-gray-600 text-sm">
                       Được huấn luyện trên các tác phẩm, bài viết và tài liệu
-                      về tư tưởng độc lập dân tộc và chủ nghĩa xã hội của Hồ Chí Minh
+                      về cách mạng tháng 8
                     </p>
                   </div>
                 </div>
@@ -524,7 +530,7 @@ const HomePage = () => {
                     <h3 className="text-lg font-bold text-gray-900 mb-2">Tương tác thông minh</h3>
                     <p className="text-gray-600 text-sm">
                       Hỗ trợ giọng nói tiếng Việt, câu hỏi gợi ý thông minh
-                      và phân tích sâu sắc về tư tưởng Hồ Chí Minh
+                      và phân tích sâu sắc về cách mạng tháng 8
                     </p>
                   </div>
                 </div>
@@ -553,12 +559,11 @@ const HomePage = () => {
                   </div>
                 </div>
 
-                <div className="p-4 space-y-4 h-64 overflow-hidden">
+                <div className="p-4 space-y-4 max-h-64 overflow-y-auto">
                                     <div className="flex justify-start">
                     <div className="bg-gray-100 p-3 rounded-2xl rounded-bl-none max-w-xs">
                       <p className="text-sm text-gray-800">
-                        Xin chào! Tôi là AI Tư tưởng Hồ Chí Minh, được huấn luyện chuyên sâu về
-                        tư tưởng độc lập dân tộc và chủ nghĩa xã hội. Bạn muốn tìm hiểu về vấn đề gì?
+                       Xin chào! Tôi là AI Cách mạng Tháng Tám, tập trung giai đoạn 1939–1945. Tôi có thể giúp bạn về: chuyển hướng 1939–1941, xây dựng lực lượng 1941–1945, Chỉ thị 3/1945, Tổng khởi nghĩa 8/1945 và ý nghĩa lịch sử. Bạn muốn bắt đầu ở phần nào?
                       </p>
                     </div>
                   </div>
@@ -566,18 +571,18 @@ const HomePage = () => {
                   <div className="flex justify-end">
                     <div className="bg-blue-500 text-white p-3 rounded-2xl rounded-br-none max-w-xs">
                       <p className="text-sm">
-                        Dạ, tư tưởng độc lập dân tộc của Bác Hồ được hình thành như thế nào ạ?
+                        Tổng khởi nghĩa (8/1945): 14–28/8 giành chính quyền trên cả nước; 19/8 Hà Nội, 23/8 Huế, 25/8 Sài Gòn. Ngày 2/9, Chủ tịch Hồ Chí Minh đọc Tuyên ngôn Độc lập.
                       </p>
                     </div>
                   </div>
 
                                     <div className="flex justify-start">
-                    <div className="bg-gray-100 p-3 rounded-2xl rounded-bl-none max-w-xs">
+                    {/* <div className="bg-gray-100 p-3 rounded-2xl rounded-bl-none max-w-xs">
                       <p className="text-sm text-gray-800">
                         Tư tưởng độc lập dân tộc của Bác Hồ hình thành từ khát vọng giải phóng
                         dân tộc khỏi ách thống trị thực dân, phong kiến...
                       </p>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
 
@@ -650,34 +655,35 @@ const HomePage = () => {
 
             <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 mb-8">
               <blockquote className="text-xl md:text-2xl text-gray-800 font-medium italic leading-relaxed">
-                "Tư tưởng độc lập dân tộc và chủ nghĩa xã hội của Hồ Chí Minh là sự kết hợp hài hòa
-                giữa chủ nghĩa yêu nước và chủ nghĩa xã hội khoa học trong điều kiện cụ thể của Việt Nam."
+                "Cách mạng Tháng Tám năm 1945 là kết quả tất yếu của phong trào đấu tranh giải phóng dân tộc,
+                dưới sự lãnh đạo đúng đắn của Đảng Cộng sản Việt Nam và Chủ tịch Hồ Chí Minh – biểu tượng cho sức mạnh đại đoàn kết toàn dân tộc."
               </blockquote>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600">Độc lập</div>
-                <div className="text-gray-600">Dân tộc</div>
+                <div className="text-2xl font-bold text-blue-600">Nguyên nhân</div>
+                <div className="text-gray-600 mt-2">Sự lãnh đạo của Đảng; phong trào yêu nước; thời cơ quốc tế</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-600">Chủ nghĩa</div>
-                <div className="text-gray-600">Xã hội</div>
+                <div className="text-2xl font-bold text-purple-600">Diễn biến</div>
+                <div className="text-gray-600 mt-2">Từ khởi nghĩa từng phần (3–8/1945) đến Tổng khởi nghĩa (13–28/8/1945); cao trào 19/8</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-600">Kết hợp</div>
-                <div className="text-gray-600">Hài hòa</div>
+                <div className="text-2xl font-bold text-green-600">Kết quả & Ý nghĩa</div>
+                <div className="text-gray-600 mt-2">2/9/1945 khai sinh nước Việt Nam Dân chủ Cộng hòa; mở kỷ nguyên độc lập</div>
               </div>
             </div>
 
             <div className="text-lg text-gray-700 leading-relaxed space-y-4">
               <p>
-                <strong>Tầm quan trọng của tư tưởng:</strong>
+                <strong>Tầm quan trọng của Cách mạng Tháng Tám:</strong>
               </p>
-              <ul className="text-left space-y-2 max-w-2xl mx-auto pl-32">
-                <li>• Định hướng con đường cách mạng Việt Nam</li>
-                <li>• Kết hợp yêu nước với chủ nghĩa quốc tế</li>
-                <li>• Nền tảng xây dựng chủ nghĩa xã hội ở Việt Nam</li>
+              <ul className="text-left space-y-2 max-w-2xl mx-auto pl-6 list-disc">
+                <li>Sự lãnh đạo sáng suốt của Đảng Cộng sản Việt Nam.</li>
+                <li>Phong trào yêu nước sôi nổi và lực lượng cách mạng trưởng thành.</li>
+                <li>Thời cơ lịch sử khi phát xít Nhật đầu hàng Đồng minh.</li>
+                <li>Chấm dứt hơn 80 năm thống trị thực dân – phong kiến; mở ra kỷ nguyên độc lập.</li>
               </ul>
             </div>
 

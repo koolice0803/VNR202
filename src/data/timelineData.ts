@@ -2,143 +2,135 @@ import type { TimelineEvent } from '../types';
 
 export const timelineEvents: TimelineEvent[] = [
   {
-    id: 'early-patriotism',
-    date: '1890-1911',
-    title: 'Hình thành ý thức yêu nước',
-    description: 'Thời thơ ấu và niên thiếu của Nguyễn Sinh Cung (Hồ Chí Minh)',
+    id: 'japanese-coup-1945',
+    date: '09/03/1945',
+    title: 'Nhật đảo chính Pháp, độc chiếm Đông Dương',
+    description: 'Sự kiện khiến chính quyền rối loạn, tạo khủng hoảng chính trị và thời cơ cho phong trào giải phóng.',
     details: [
-      'Sinh ra trong gia đình có truyền thống yêu nước',
-      'Chứng kiến cảnh đất nước bị thực dân Pháp đô hộ',
-      'Tiếp xúc với phong trào yêu nước của cha Nguyễn Sinh Sắc',
-      'Hình thành ý chí tìm đường cứu nước từ nhỏ',
-      'Nền tảng đầu tiên của tư tưởng độc lập dân tộc'
+      'Địa điểm / Lực lượng: Toàn cõi Đông Dương',
+      'Ý nghĩa: Tạo ra khủng hoảng chính trị, quân sự sâu sắc — thời cơ cho cách mạng.'
     ],
-    category: 'social',
+    category: 'political'
   },
   {
-    id: 'journey-abroad',
-    date: '1911-1917',
-    title: 'Ra đi tìm đường cứu nước',
-    description: 'Hồ Chí Minh rời Việt Nam để tìm hiểu thế giới và con đường giải phóng dân tộc',
+    id: 'directive-march-12-1945',
+    date: '12/03/1945',
+    title: 'Ban Thường vụ Trung ương ra chỉ thị "Nhật – Pháp bắn nhau và hành động của chúng ta"',
+    description: 'Chỉ thị xác định đường lối phát động khởi nghĩa từng phần, chuẩn bị cho Tổng khởi nghĩa.',
     details: [
-      'Rời cảng Nhà Rồng trên tàu Amiral Latouche-Tréville',
-      'Đi qua nhiều nước châu Phi, châu Âu, châu Mỹ',
-      'Chứng kiến thực trạng các dân tộc bị áp bức',
-      'Tích lũy kinh nghiệm đấu tranh của các dân tộc',
-      'Khẳng định con đường độc lập dân tộc là tất yếu'
+      'Địa điểm: Hà Nội',
+      'Ý nghĩa: Xác định đường lối phát động khởi nghĩa từng phần, chuẩn bị Tổng khởi nghĩa.'
     ],
-    category: 'international',
+    category: 'political'
   },
   {
-    id: 'paris-period',
-    date: '1917-1923',
-    title: 'Thời kỳ ở Paris và tiếp xúc với chủ nghĩa xã hội',
-    description: 'Nguyễn Ái Quốc tiếp xúc với tư tưởng Mác-Lênin và hoạt động cách mạng',
+    id: 'vietbac-15-20-4-1945',
+    date: '15–20/04/1945',
+    title: 'Thành lập Khu giải phóng Việt Bắc',
+    description: 'Xây dựng chính quyền cách mạng ở nhiều nơi, là bước chuẩn bị trực tiếp cho Tổng khởi nghĩa toàn quốc.',
     details: [
-      'Tham gia Đảng Xã hội Pháp',
-      'Đọc "Luận cương về vấn đề dân tộc và thuộc địa" của Lênin',
-      'Nhận ra con đường giải phóng dân tộc qua cách mạng xã hội chủ nghĩa',
-      'Viết "Bản án chế độ thực dân Pháp"',
-      'Hình thành tư tưởng kết hợp độc lập dân tộc với chủ nghĩa xã hội'
+      'Địa điểm: Việt Bắc',
+      'Ý nghĩa: Là bước chuẩn bị trực tiếp cho Tổng khởi nghĩa toàn quốc.'
     ],
-    category: 'political',
+    category: 'political'
   },
   {
-    id: 'communist-party-foundation',
-    date: '3/2/1930',
-    title: 'Thành lập Đảng Cộng sản Việt Nam',
-    description: 'Hồ Chí Minh thành lập Đảng, đánh dấu sự kết hợp hoàn chỉnh hai tư tưởng',
+    id: 'tan-trao-13-15-8-1945',
+    date: '13–15/08/1945',
+    title: 'Hội nghị toàn quốc của Đảng họp tại Tân Trào, quyết định phát động Tổng khởi nghĩa',
+    description: 'Hội nghị đề ra chủ trương, kế hoạch và thời điểm Tổng khởi nghĩa giành chính quyền trong cả nước.',
     details: [
-      'Hội nghị thành lập Đảng tại Hồng Kông',
-      'Thống nhất các tổ chức cộng sản trong nước',
-      'Cương lĩnh chính trị đầu tiên của Đảng',
-      'Kết hợp mục tiêu độc lập dân tộc và cách mạng xã hội chủ nghĩa',
-      'Nền tảng lý luận cho cách mạng Việt Nam'
+      'Địa điểm: Tân Trào (Tuyên Quang)',
+      'Ý nghĩa: Đề ra chủ trương, kế hoạch và thời điểm Tổng khởi nghĩa.'
     ],
-    category: 'political',
+    category: 'political'
   },
   {
-    id: 'viet-minh-formation',
-    date: '19/5/1941',
-    title: 'Thành lập Việt Minh',
-    description: 'Hồ Chí Minh thành lập Mặt trận Việt Minh, thể hiện tư tưởng đoàn kết dân tộc',
+    id: 'tan-trao-16-17-8-1945',
+    date: '16–17/08/1945',
+    title: 'Đại hội Quốc dân Tân Trào; thông qua Lệnh Tổng khởi nghĩa',
+    description: 'Thông qua Lệnh Tổng khởi nghĩa, 10 chính sách lớn và bầu Ủy ban Dân tộc Giải phóng Việt Nam do Hồ Chí Minh làm Chủ tịch.',
     details: [
-      'Hội nghị thành lập tại Pác Bó, Cao Bằng',
-      'Đoàn kết toàn dân tộc chống thực dân, phát xít',
-      'Kết hợp đấu tranh dân tộc với đấu tranh giai cấp',
-      'Cương lĩnh: "Đánh đuổi Pháp - Nhật, giành độc lập"',
-      'Thể hiện tư tưởng đại đoàn kết dân tộc'
+      'Địa điểm: Tân Trào',
+      'Ý nghĩa: Hợp pháp hóa chủ trương khởi nghĩa; thống nhất ý chí toàn dân.'
     ],
-    category: 'political',
+    category: 'political'
   },
   {
-    id: 'independence-declaration',
-    date: '2/9/1945',
-    title: 'Tuyên ngôn độc lập',
-    description: 'Hồ Chí Minh đọc Tuyên ngôn độc lập, thành lập nước Việt Nam Dân chủ Cộng hòa',
+    id: 'local-uprisings-14-18-8-1945',
+    date: '14–18/08/1945',
+    title: 'Khởi nghĩa thắng lợi ở nhiều địa phương (Bắc Giang, Hải Dương, Hà Tĩnh, Quảng Nam...)',
+    description: 'Mở đầu cao trào cách mạng trong cả nước, tạo đà cho Tổng khởi nghĩa.',
     details: [
-      'Tuyên bố độc lập tại Quảng trường Ba Đình',
-      'Thành lập nước Việt Nam Dân chủ Cộng hòa',
-      'Khẳng định quyền bình đẳng của các dân tộc',
-      'Kết hợp độc lập dân tộc với dân chủ nhân dân',
-      'Hiện thực hóa tư tưởng độc lập dân tộc'
+      'Địa điểm: Bắc Bộ, Trung Bộ',
+      'Ý nghĩa: Mở đầu cao trào cách mạng trong cả nước.'
     ],
-    category: 'political',
+    category: 'military'
   },
   {
-    id: 'resistance-war',
-    date: '1946-1954',
-    title: 'Kháng chiến chống Pháp',
-    description: 'Thực hiện tư tưởng độc lập dân tộc qua cuộc kháng chiến toàn dân',
+    id: 'aug-19-1945',
+    date: '19/08/1945',
+    title: 'Khởi nghĩa giành chính quyền ở Hà Nội thắng lợi',
+    description: 'Mốc bùng nổ Tổng khởi nghĩa, ảnh hưởng mạnh mẽ đến các địa phương.',
     details: [
-      'Lãnh đạo cuộc kháng chiến chống thực dân Pháp',
-      'Kết hợp kháng chiến với kiến quốc',
-      'Thực hiện cải cách ruộng đất',
-      'Xây dựng chính quyền nhân dân',
-      'Chiến thắng Điện Biên Phủ năm 1954'
+      'Địa điểm: Hà Nội',
+      'Ý nghĩa: Mốc bùng nổ Tổng khởi nghĩa, ảnh hưởng mạnh mẽ đến các địa phương.'
     ],
-    category: 'military',
+    category: 'military'
   },
   {
-    id: 'socialist-construction',
-    date: '1954-1969',
-    title: 'Xây dựng chủ nghĩa xã hội ở miền Bắc',
-    description: 'Thực hiện tư tưởng chủ nghĩa xã hội trong điều kiện cụ thể của Việt Nam',
+    id: 'hue-23-8-1945',
+    date: '23/08/1945',
+    title: 'Nhân dân Huế khởi nghĩa, giành chính quyền',
+    description: 'Trung tâm miền Trung được giải phóng.',
     details: [
-      'Tiến hành cải cách ruộng đất',
-      'Xây dựng nền kinh tế xã hội chủ nghĩa',
-      'Phát triển giáo dục và văn hóa',
-      'Xóa bỏ chế độ bóc lột',
-      'Xây dựng con người mới xã hội chủ nghĩa'
+      'Địa điểm: Huế',
+      'Ý nghĩa: Trung tâm miền Trung được giải phóng.'
     ],
-    category: 'social',
+    category: 'military'
   },
   {
-    id: 'national-liberation',
-    date: '1954-1975',
-    title: 'Đấu tranh giải phóng miền Nam',
-    description: 'Tiếp tục thực hiện tư tưởng độc lập dân tộc và thống nhất đất nước',
+    id: 'saigon-25-8-1945',
+    date: '25/08/1945',
+    title: 'Nhân dân Sài Gòn – Gia Định khởi nghĩa giành chính quyền',
+    description: 'Hoàn tất khởi nghĩa trong cả nước, tiến tới thiết lập chính quyền nhân dân ở Nam Bộ.',
     details: [
-      'Lãnh đạo cuộc đấu tranh giải phóng miền Nam',
-      'Kết hợp đấu tranh chính trị với đấu tranh vũ trang',
-      'Xây dựng mặt trận đoàn kết rộng rãi',
-      'Thực hiện nghĩa vụ quốc tế',
-      'Hoàn thành mục tiêu thống nhất đất nước'
+      'Địa điểm: Nam Bộ',
+      'Ý nghĩa: Hoàn tất khởi nghĩa trong cả nước.'
     ],
-    category: 'political',
+    category: 'military'
   },
   {
-    id: 'ho-chi-minh-testament',
-    date: '10/5/1969',
-    title: 'Di chúc của Chủ tịch Hồ Chí Minh',
-    description: 'Tổng kết và khẳng định tư tưởng độc lập dân tộc và chủ nghĩa xã hội',
+    id: 'provisional-gov-28-8-1945',
+    date: '28/08/1945',
+    title: 'Ủy ban Dân tộc Giải phóng Việt Nam trở thành Chính phủ Lâm thời',
+    description: 'Chính phủ Lâm thời Việt Nam Dân chủ Cộng hòa được thành lập, điều hành đất nước sau khởi nghĩa.',
     details: [
-      'Khẳng định con đường độc lập dân tộc gắn với chủ nghĩa xã hội',
-      'Nhấn mạnh đại đoàn kết dân tộc',
-      'Giáo dục truyền thống cách mạng cho thế hệ trẻ',
-      'Xây dựng Đảng trong sạch, vững mạnh',
-      'Di sản tư tưởng cho các thế hệ mai sau'
+      'Địa điểm: Toàn quốc',
+      'Ý nghĩa: Cả nước hoàn toàn giành được chính quyền về tay nhân dân.'
     ],
-    category: 'political',
+    category: 'political'
+  },
+  {
+    id: 'bao-dai-abdication-30-8-1945',
+    date: '30/08/1945',
+    title: 'Vua Bảo Đại thoái vị, chấm dứt chế độ phong kiến',
+    description: 'Sự kiện chấm dứt chế độ quân chủ truyền thống ở Việt Nam.',
+    details: [
+      'Địa điểm: Huế',
+      'Ý nghĩa: Xóa bỏ vĩnh viễn chế độ quân chủ hơn 1.000 năm ở Việt Nam.'
+    ],
+    category: 'political'
+  },
+  {
+    id: 'sept-2-1945',
+    date: '02/09/1945',
+    title: 'Chủ tịch Hồ Chí Minh đọc Tuyên ngôn Độc lập',
+    description: 'Khai sinh nước Việt Nam Dân chủ Cộng hòa tại Quảng trường Ba Đình — mốc son chói lọi.',
+    details: [
+      'Địa điểm: Quảng trường Ba Đình – Hà Nội',
+      'Ý nghĩa: Mốc son chói lọi, mở ra kỷ nguyên độc lập, tự do cho dân tộc Việt Nam.'
+    ],
+    category: 'political'
   }
 ];

@@ -44,3 +44,23 @@ body {
 /* html {
   scroll-behavior: smooth;
 } */
+
+/* Uniform logo style: use for small brand icons and avatars to keep sizes consistent */
+.uniform-logo {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  object-fit: contain;
+}
+
+/* Variant for slightly larger logos */
+.uniform-logo--lg {
+  width: 64px;
+  height: 64px;
+}
+
+/* Utility to force square and center within a rounded container */
+.uniform-logo--rounded {
+  border-radius: 9999px;
+  overflow: hidden;
+}
