@@ -4,719 +4,549 @@ export interface QuizQuestion {
   options: string[];
   correctAnswer: number;
   explanation: string;
-  category: 'tu-tuong-doc-lap' | 'tu-tuong-xa-hoi' | 'ket-hop-hai-tu-tuong' | 'van-dung-thuc-tien' | 'y-nghia-lich-su';
+  category: 'tu-tuong-doc-lap-dan-toc' | 'tu-tuong-xa-hoi-chu-nghia' | 'ket-hop-hai-tu-tuong' | 'van-dung-thuc-tien' | 'y-nghia-lich-su' | 'mo-bai-vui';
   difficulty: 'easy' | 'medium' | 'hard';
 }
 
 export const quizQuestions: QuizQuestion[] = [
   {
-    id: 1,
-    question: "Tư tưởng độc lập dân tộc của Hồ Chí Minh được hình thành từ khát vọng nào?",
-    options: [
-      "Khát vọng làm giàu cho cá nhân",
-      "Khát vọng giải phóng dân tộc khỏi ách thống trị",
-      "Khát vọng trở thành lãnh đạo",
-      "Khát vọng du lịch khắp thế giới"
-    ],
-    correctAnswer: 1,
-    explanation: "Tư tưởng độc lập dân tộc của Hồ Chí Minh xuất phát từ khát vọng giải phóng dân tộc Việt Nam khỏi ách thống trị của thực dân, phong kiến.",
-    category: 'tu-tuong-doc-lap',
-    difficulty: 'easy'
+    "id": 1,
+    "question": "Chiến tranh thế giới thứ hai bùng nổ vào năm nào?",
+    "options": ["1937", "1938", "1939", "1940"],
+    "correctAnswer": 2,
+    "explanation": "Chiến tranh thế giới thứ hai bùng nổ năm 1939, mở đầu thời kỳ biến động lớn ảnh hưởng đến Việt Nam.",
+    "category": "tu-tuong-doc-lap-dan-toc",
+    "difficulty": "easy"
   },
   {
-    id: 2,
-    question: "Hồ Chí Minh tiếp xúc với tư tưởng Mác-Lênin lần đầu tiên ở đâu?",
-    options: [
-      "Liên Xô",
-      "Trung Quốc",
-      "Pháp",
-      "Đức"
-    ],
-    correctAnswer: 2,
-    explanation: "Hồ Chí Minh tiếp xúc với tư tưởng Mác-Lênin lần đầu tiên khi ở Paris, Pháp, thông qua việc đọc 'Luận cương về vấn đề dân tộc và thuộc địa' của Lênin.",
-    category: 'tu-tuong-xa-hoi',
-    difficulty: 'medium'
+    "id": 2,
+    "question": "Hội nghị Trung ương 6 (11/1939) của Đảng xác định nhiệm vụ hàng đầu là:",
+    "options": ["Đánh đổ phong kiến", "Cải cách ruộng đất", "Giành độc lập dân tộc", "Dân chủ hóa xã hội"],
+    "correctAnswer": 2,
+    "explanation": "Hội nghị Trung ương 6 (1939) chuyển hướng chiến lược, đặt nhiệm vụ giải phóng dân tộc lên hàng đầu.",
+    "category": "tu-tuong-doc-lap-dan-toc",
+    "difficulty": "easy"
   },
   {
-    id: 3,
-    question: "Đảng Cộng sản Việt Nam được thành lập vào ngày nào?",
-    options: [
-      "19/5/1890",
-      "3/2/1930",
-      "2/9/1945",
-      "19/5/1941"
-    ],
-    correctAnswer: 1,
-    explanation: "Đảng Cộng sản Việt Nam được Hồ Chí Minh thành lập ngày 3/2/1930 tại Hồng Kông, đánh dấu sự kết hợp giữa chủ nghĩa yêu nước và chủ nghĩa xã hội.",
-    category: 'tu-tuong-xa-hoi',
-    difficulty: 'easy'
+    "id": 3,
+    "question": "Người chủ trì Hội nghị Trung ương 8 (5/1941) là:",
+    "options": ["Trường Chinh", "Phạm Văn Đồng", "Nguyễn Ái Quốc", "Lê Hồng Phong"],
+    "correctAnswer": 2,
+    "explanation": "Nguyễn Ái Quốc chủ trì Hội nghị Trung ương 8, hoàn chỉnh chuyển hướng cách mạng giải phóng dân tộc.",
+    "category": "tu-tuong-doc-lap-dan-toc",
+    "difficulty": "easy"
   },
   {
-    id: 4,
-    question: "Việt Minh được thành lập vào năm nào?",
-    options: [
-      "1930",
-      "1941",
-      "1945",
-      "1954"
-    ],
-    correctAnswer: 1,
-    explanation: "Việt Minh được thành lập ngày 19/5/1941 tại Pác Bó, Cao Bằng, thể hiện tư tưởng đại đoàn kết dân tộc của Hồ Chí Minh.",
-    category: 'ket-hop-hai-tu-tuong',
-    difficulty: 'medium'
+    "id": 4,
+    "question": "Mặt trận Việt Nam Độc lập Đồng minh (Việt Minh) được thành lập với mục tiêu:",
+    "options": ["Xây dựng xã hội mới", "Đoàn kết toàn dân chống đế quốc", "Bảo vệ quyền lợi công nhân", "Giải quyết ruộng đất"],
+    "correctAnswer": 1,
+    "explanation": "Việt Minh được thành lập để đoàn kết toàn dân chống đế quốc, giành độc lập dân tộc.",
+    "category": "tu-tuong-doc-lap-dan-toc",
+    "difficulty": "easy"
   },
   {
-    id: 5,
-    question: "Tuyên ngôn độc lập 2/9/1945 thể hiện điều gì?",
-    options: [
-      "Chỉ có tư tưởng độc lập dân tộc",
-      "Chỉ có tư tưởng xã hội chủ nghĩa",
-      "Sự kết hợp độc lập dân tộc với dân chủ nhân dân",
-      "Không có tư tưởng gì rõ ràng"
-    ],
-    correctAnswer: 2,
-    explanation: "Tuyên ngôn độc lập 2/9/1945 thể hiện sự kết hợp hài hòa giữa độc lập dân tộc và dân chủ nhân dân, nền tảng của nhà nước Việt Nam.",
-    category: 'ket-hop-hai-tu-tuong',
-    difficulty: 'medium'
+    "id": 5,
+    "question": "Câu nói “Trong lúc này, quyền lợi dân tộc giải phóng cao hơn hết thảy” thuộc về:",
+    "options": ["Hội nghị TW 6", "Hội nghị TW 7", "Hội nghị TW 8", "Hội nghị Tân Trào"],
+    "correctAnswer": 2,
+    "explanation": "Hội nghị Trung ương 8 (5/1941) xác định giải phóng dân tộc là nhiệm vụ cao nhất.",
+    "category": "tu-tuong-doc-lap-dan-toc",
+    "difficulty": "easy"
   },
   {
-    id: 6,
-    question: "Cải cách ruộng đất 1953-1956 thể hiện tư tưởng nào của Hồ Chí Minh?",
-    options: [
-      "Chỉ có tư tưởng độc lập dân tộc",
-      "Chỉ có tư tưởng xã hội chủ nghĩa",
-      "Kết hợp độc lập dân tộc với xây dựng xã hội công bằng",
-      "Không liên quan đến tư tưởng"
-    ],
-    correctAnswer: 2,
-    explanation: "Cải cách ruộng đất thể hiện việc vận dụng tư tưởng xã hội chủ nghĩa để xây dựng xã hội công bằng, đồng thời củng cố độc lập dân tộc.",
-    category: 'van-dung-thuc-tien',
-    difficulty: 'easy'
+    "id": 6,
+    "question": "Đội Việt Nam Tuyên truyền Giải phóng quân được thành lập ngày:",
+    "options": ["22/12/1944", "19/8/1945", "9/3/1945", "2/9/1945"],
+    "correctAnswer": 0,
+    "explanation": "Đội được thành lập ngày 22/12/1944 – tiền thân của Quân đội Nhân dân Việt Nam.",
+    "category": "tu-tuong-doc-lap-dan-toc",
+    "difficulty": "medium"
   },
   {
-    id: 7,
-    question: "Đường lối 'kháng chiến kiến quốc' thể hiện điều gì?",
-    options: [
-      "Chỉ tập trung kháng chiến",
-      "Chỉ tập trung xây dựng đất nước",
-      "Kết hợp kháng chiến với xây dựng đất nước",
-      "Không có mục tiêu rõ ràng"
-    ],
-    correctAnswer: 2,
-    explanation: "Đường lối 'kháng chiến kiến quốc' thể hiện sự kết hợp hài hòa giữa bảo vệ độc lập dân tộc và xây dựng chế độ xã hội mới.",
-    category: 'van-dung-thuc-tien',
-    difficulty: 'medium'
+    "id": 7,
+    "question": "Người chỉ huy đầu tiên của Đội Việt Nam Tuyên truyền Giải phóng quân là:",
+    "options": ["Võ Nguyên Giáp", "Phạm Văn Đồng", "Trường Chinh", "Hoàng Văn Thái"],
+    "correctAnswer": 0,
+    "explanation": "Đại tướng Võ Nguyên Giáp là người chỉ huy đầu tiên của Đội Việt Nam Tuyên truyền Giải phóng quân.",
+    "category": "tu-tuong-doc-lap-dan-toc",
+    "difficulty": "easy"
   },
   {
-    id: 8,
-    question: "Di chúc của Chủ tịch Hồ Chí Minh khẳng định điều gì?",
-    options: [
-      "Chỉ cần độc lập dân tộc",
-      "Chỉ cần chủ nghĩa xã hội",
-      "Độc lập dân tộc và chủ nghĩa xã hội là hai mục tiêu chiến lược",
-      "Không cần mục tiêu gì"
-    ],
-    correctAnswer: 2,
-    explanation: "Di chúc Hồ Chí Minh khẳng định 'Độc lập dân tộc và chủ nghĩa xã hội là hai mục tiêu chiến lược của cách mạng Việt Nam'.",
-    category: 'ket-hop-hai-tu-tuong',
-    difficulty: 'medium'
+    "id": 8,
+    "question": "Căn cứ địa cách mạng đầu tiên của Việt Minh được hình thành ở:",
+    "options": ["Nghệ An", "Bắc Ninh", "Cao – Bắc – Lạng", "Quảng Nam"],
+    "correctAnswer": 2,
+    "explanation": "Khu căn cứ Cao – Bắc – Lạng là cái nôi của phong trào cách mạng Việt Minh.",
+    "category": "tu-tuong-doc-lap-dan-toc",
+    "difficulty": "medium"
   },
   {
-    id: 9,
-    question: "Tư tưởng Hồ Chí Minh có ý nghĩa gì đối với thời đại ngày nay?",
-    options: [
-      "Chỉ có ý nghĩa lịch sử",
-      "Không còn phù hợp",
-      "Tiếp tục là kim chỉ nam cho sự nghiệp đổi mới",
-      "Chỉ áp dụng cho quá khứ"
-    ],
-    correctAnswer: 2,
-    explanation: "Tư tưởng Hồ Chí Minh về độc lập dân tộc và chủ nghĩa xã hội tiếp tục là kim chỉ nam cho sự nghiệp đổi mới và phát triển đất nước.",
-    category: 'y-nghia-lich-su',
-    difficulty: 'hard'
+    "id": 9,
+    "question": "Khi Nhật đảo chính Pháp (3/1945), Đảng ta đã ban hành:",
+    "options": ["Chỉ thị 'Toàn dân khởi nghĩa'", "Chỉ thị 'Nhật – Pháp bắn nhau và hành động của chúng ta'", "Nghị quyết kháng chiến", "Tuyên ngôn độc lập"],
+    "correctAnswer": 1,
+    "explanation": "Chỉ thị 'Nhật – Pháp bắn nhau và hành động của chúng ta' xác định rõ kẻ thù chính là phát xít Nhật.",
+    "category": "tu-tuong-doc-lap-dan-toc",
+    "difficulty": "medium"
   },
   {
-    id: 10,
-    question: "Đặc điểm nổi bật nhất của tư tưởng Hồ Chí Minh là gì?",
-    options: [
-      "Chỉ có tính dân tộc",
-      "Chỉ có tính quốc tế",
-      "Kết hợp hài hòa tính dân tộc với tính thời đại",
-      "Không có đặc điểm gì"
-    ],
-    correctAnswer: 2,
-    explanation: "Đặc điểm nổi bật nhất là sự kết hợp hài hòa giữa tính dân tộc (độc lập dân tộc) với tính thời đại (chủ nghĩa xã hội).",
-    category: 'y-nghia-lich-su',
-    difficulty: 'hard'
+    "id": 10,
+    "question": "Phong trào 'Kháng Nhật cứu nước' được phát động nhằm:",
+    "options": ["Lật đổ chính quyền Pháp", "Đấu tranh dân sinh", "Giành chính quyền từ phát xít Nhật", "Chống nạn đói"],
+    "correctAnswer": 2,
+    "explanation": "Phong trào được phát động để chuẩn bị cho Tổng khởi nghĩa, giành chính quyền từ tay Nhật.",
+    "category": "tu-tuong-doc-lap-dan-toc",
+    "difficulty": "medium"
   },
   {
-    id: 11,
-    question: "Theo Hồ Chí Minh, độc lập dân tộc có nghĩa là gì?",
-    options: [
-      "Chỉ tự do về chính trị",
-      "Chỉ tự chủ về kinh tế",
-      "Tự do, tự chủ toàn diện về chính trị, kinh tế, văn hóa",
-      "Chỉ bảo vệ lãnh thổ"
-    ],
-    correctAnswer: 2,
-    explanation: "Độc lập dân tộc theo Hồ Chí Minh là sự tự do, tự chủ toàn diện về chính trị, kinh tế, văn hóa, không phụ thuộc vào bất kỳ thế lực ngoại bang nào.",
-    category: 'tu-tuong-doc-lap',
-    difficulty: 'medium'
+    "id": 11,
+    "question": "Mục tiêu chiến lược xuyên suốt của Đảng giai đoạn 1939–1945 là:",
+    "options": ["Xây dựng xã hội chủ nghĩa", "Giải phóng dân tộc", "Phát triển kinh tế", "Chống phong kiến"],
+    "correctAnswer": 1,
+    "explanation": "Từ 1939–1945, Đảng đặt giải phóng dân tộc làm nhiệm vụ bao trùm.",
+    "category": "tu-tuong-doc-lap-dan-toc",
+    "difficulty": "easy"
   },
   {
-    id: 12,
-    question: "Hồ Chí Minh khẳng định 'Không có gì quý hơn độc lập tự do' trong tác phẩm nào?",
-    options: [
-      "Tuyên ngôn độc lập",
-      "Di chúc",
-      "Đường Kách Mệnh",
-      "Nhật ký trong tù"
-    ],
-    correctAnswer: 1,
-    explanation: "Câu nói nổi tiếng này được Hồ Chí Minh khẳng định trong Di chúc, thể hiện tầm quan trọng tối cao của độc lập dân tộc.",
-    category: 'tu-tuong-doc-lap',
-    difficulty: 'easy'
+    "id": 12,
+    "question": "Trong giai đoạn 1939–1945, Đảng tạm gác khẩu hiệu nào?",
+    "options": ["'Độc lập dân tộc'", "'Ruộng đất cho dân cày'", "'Chống đế quốc'", "'Hòa bình, dân chủ'"],
+    "correctAnswer": 1,
+    "explanation": "Đảng tạm gác khẩu hiệu 'Ruộng đất cho dân cày' để tập trung toàn lực cho giải phóng dân tộc.",
+    "category": "tu-tuong-xa-hoi-chu-nghia",
+    "difficulty": "easy"
   },
   {
-    id: 13,
-    question: "Chủ nghĩa xã hội trong tư tưởng Hồ Chí Minh có đặc điểm gì?",
-    options: [
-      "Hoàn toàn giống Liên Xô",
-      "Hoàn toàn giống Trung Quốc",
-      "Mang đậm tính dân tộc Việt Nam",
-      "Không có đặc điểm riêng"
-    ],
-    correctAnswer: 2,
-    explanation: "Chủ nghĩa xã hội trong tư tưởng Hồ Chí Minh mang đậm tính dân tộc, phù hợp với điều kiện cụ thể của Việt Nam.",
-    category: 'tu-tuong-xa-hoi',
-    difficulty: 'medium'
+    "id": 13,
+    "question": "Lực lượng lãnh đạo cách mạng được xác định là:",
+    "options": ["Tư sản", "Trí thức", "Giai cấp công – nông", "Nông dân trung lưu"],
+    "correctAnswer": 2,
+    "explanation": "Giai cấp công – nông là lực lượng nòng cốt trong cách mạng Việt Nam.",
+    "category": "tu-tuong-xa-hoi-chu-nghia",
+    "difficulty": "easy"
   },
   {
-    id: 14,
-    question: "Theo Hồ Chí Minh, mục tiêu của chủ nghĩa xã hội là gì?",
-    options: [
-      "Làm giàu cho một số người",
-      "Dân giàu, nước mạnh, xã hội công bằng, dân chủ, văn minh",
-      "Chỉ phát triển công nghiệp",
-      "Chỉ cải cách nông nghiệp"
-    ],
-    correctAnswer: 1,
-    explanation: "Mục tiêu chủ nghĩa xã hội theo Hồ Chí Minh là 'Dân giàu, nước mạnh, xã hội công bằng, dân chủ, văn minh'.",
-    category: 'tu-tuong-xa-hoi',
-    difficulty: 'easy'
+    "id": 14,
+    "question": "Chính sách ruộng đất thời kỳ này được điều chỉnh nhằm:",
+    "options": ["Tập trung tịch thu ruộng địa chủ", "Đoàn kết mọi tầng lớp yêu nước", "Giảm thuế ruộng cho địa chủ", "Chia lại ruộng đất cho nông dân nghèo"],
+    "correctAnswer": 1,
+    "explanation": "Chính sách ruộng đất được điều chỉnh để mở rộng khối đoàn kết dân tộc.",
+    "category": "tu-tuong-xa-hoi-chu-nghia",
+    "difficulty": "medium"
   },
   {
-    id: 15,
-    question: "Tại sao Hồ Chí Minh kết hợp độc lập dân tộc với chủ nghĩa xã hội?",
-    options: [
-      "Để bắt chước nước khác",
-      "Vì áp lực quốc tế",
-      "Để giải quyết triệt để vấn đề dân tộc và xã hội",
-      "Không có lý do cụ thể"
-    ],
-    correctAnswer: 2,
-    explanation: "Hồ Chí Minh kết hợp hai tư tưởng để giải quyết triệt để cả vấn đề dân tộc (giải phóng khỏi thực dân) và vấn đề xã hội (xóa bỏ bóc lột).",
-    category: 'ket-hop-hai-tu-tuong',
-    difficulty: 'hard'
+    "id": 15,
+    "question": "Việc thành lập Mặt trận Việt Minh thể hiện sự sáng tạo trong:",
+    "options": ["Chính sách dân sinh", "Đại đoàn kết toàn dân", "Quân sự", "Ngoại giao"],
+    "correctAnswer": 1,
+    "explanation": "Việt Minh là minh chứng cho tư tưởng đại đoàn kết toàn dân của Đảng và Hồ Chí Minh.",
+    "category": "tu-tuong-xa-hoi-chu-nghia",
+    "difficulty": "medium"
   },
   {
-    id: 16,
-    question: "Chiến lược 'Kháng chiến kiến quốc' thể hiện tư tưởng nào?",
-    options: [
-      "Chỉ tư tưởng quân sự",
-      "Chỉ tư tưởng kinh tế",
-      "Kết hợp bảo vệ độc lập với xây dựng chế độ mới",
-      "Không có tư tưởng rõ ràng"
-    ],
-    correctAnswer: 2,
-    explanation: "Chiến lược 'Kháng chiến kiến quốc' thể hiện sự kết hợp giữa bảo vệ độc lập dân tộc và xây dựng chế độ xã hội chủ nghĩa.",
-    category: 'van-dung-thuc-tien',
-    difficulty: 'medium'
+    "id": 16,
+    "question": "Đảng đã kết hợp hai hình thức đấu tranh nào trong giai đoạn 1939–1945?",
+    "options": ["Chính trị và ngoại giao", "Chính trị và vũ trang", "Kinh tế và văn hóa", "Nghị trường và báo chí"],
+    "correctAnswer": 1,
+    "explanation": "Đảng kết hợp đấu tranh chính trị và vũ trang để tạo sức mạnh tổng hợp cho khởi nghĩa.",
+    "category": "tu-tuong-xa-hoi-chu-nghia",
+    "difficulty": "medium"
   },
   {
-    id: 17,
-    question: "Chính sách đại đoàn kết dân tộc của Hồ Chí Minh dựa trên nguyên tắc nào?",
-    options: [
-      "Chia để trị",
-      "Đoàn kết những người yêu nước",
-      "Chỉ đoàn kết một tầng lớp",
-      "Loại trừ các tầng lớp khác"
-    ],
-    correctAnswer: 1,
-    explanation: "Chính sách đại đoàn kết dân tộc dựa trên nguyên tắc đoàn kết tất cả những người yêu nước, bất kể giai cấp, tôn giáo, chính kiến.",
-    category: 'van-dung-thuc-tien',
-    difficulty: 'easy'
+    "id": 17,
+    "question": "Quan điểm 'cách mạng là sự nghiệp của quần chúng' thể hiện qua:",
+    "options": ["Công tác tuyên truyền sâu rộng", "Dựa vào ngoại viện", "Chính sách ruộng đất", "Chính quyền tạm thời"],
+    "correctAnswer": 0,
+    "explanation": "Đảng chú trọng tuyên truyền, giác ngộ quần chúng để phát huy sức mạnh toàn dân.",
+    "category": "tu-tuong-xa-hoi-chu-nghia",
+    "difficulty": "medium"
   },
   {
-    id: 18,
-    question: "Tư tưởng Hồ Chí Minh có ảnh hưởng gì đến các nước đang phát triển?",
-    options: [
-      "Không có ảnh hưởng",
-      "Chỉ ảnh hưởng đến Việt Nam",
-      "Là tấm gương về con đường giải phóng dân tộc",
-      "Chỉ có ý nghĩa lý thuyết"
-    ],
-    correctAnswer: 2,
-    explanation: "Tư tưởng Hồ Chí Minh là tấm gương sáng về con đường kết hợp giải phóng dân tộc với tiến bộ xã hội cho các nước đang phát triển.",
-    category: 'y-nghia-lich-su',
-    difficulty: 'medium'
+    "id": 18,
+    "question": "Hồ Chí Minh khẳng định: 'Muốn cứu nước, giải phóng dân tộc không có con đường nào khác ngoài con đường…'",
+    "options": ["Dân chủ", "Xã hội chủ nghĩa", "Cách mạng vô sản", "Cải cách"],
+    "correctAnswer": 2,
+    "explanation": "Hồ Chí Minh xác định cách mạng vô sản là con đường duy nhất đúng để cứu nước.",
+    "category": "tu-tuong-xa-hoi-chu-nghia",
+    "difficulty": "medium"
   },
   {
-    id: 19,
-    question: "Trong thời kỳ đổi mới, tư tưởng Hồ Chí Minh được vận dụng như thế nào?",
-    options: [
-      "Không còn phù hợp",
-      "Áp dụng nguyên văn",
-      "Vận dụng sáng tạo phù hợp với điều kiện mới",
-      "Chỉ lưu giữ như di sản"
-    ],
-    correctAnswer: 2,
-    explanation: "Tư tưởng Hồ Chí Minh được vận dụng sáng tạo, phù hợp với điều kiện mới của thời kỳ đổi mới và hội nhập quốc tế.",
-    category: 'y-nghia-lich-su',
-    difficulty: 'hard'
+    "id": 19,
+    "question": "Thắng lợi của Cách mạng Tháng Tám khẳng định đường lối:",
+    "options": ["Dân chủ tư sản", "Giải phóng dân tộc đúng đắn", "Quốc tế vô sản", "Hòa bình dân chủ"],
+    "correctAnswer": 1,
+    "explanation": "Đường lối giải phóng dân tộc của Đảng là đúng đắn và phù hợp thực tiễn.",
+    "category": "tu-tuong-xa-hoi-chu-nghia",
+    "difficulty": "medium"
   },
   {
-    id: 20,
-    question: "Theo Hồ Chí Minh, 'Dân là gốc' có nghĩa là gì?",
-    options: [
-      "Dân chỉ là công cụ",
-      "Dân là chủ thể của cách mạng và xây dựng đất nước",
-      "Dân phải tuân theo mọi quyết định",
-      "Dân không có vai trò quan trọng"
-    ],
-    correctAnswer: 1,
-    explanation: "Tư tưởng 'Dân là gốc' khẳng định nhân dân là chủ thể của cách mạng và xây dựng đất nước, là nguồn gốc của mọi quyền lực.",
-    category: 'tu-tuong-xa-hoi',
-    difficulty: 'easy'
+    "id": 20,
+    "question": "Hội nghị Trung ương 8 có ý nghĩa đặc biệt vì:",
+    "options": ["Khởi đầu cao trào dân chủ mới", "Hoàn chỉnh chuyển hướng chiến lược", "Tuyên bố độc lập", "Bắt đầu kháng chiến"],
+    "correctAnswer": 1,
+    "explanation": "Hội nghị TW8 hoàn chỉnh chuyển hướng chiến lược từ dân chủ sang giải phóng dân tộc.",
+    "category": "tu-tuong-xa-hoi-chu-nghia",
+    "difficulty": "medium"
   },
   {
-    id: 21,
-    question: "Hồ Chí Minh sinh năm nào?",
-    options: [
-      "1889",
-      "1890",
-      "1891",
-      "1892"
-    ],
-    correctAnswer: 1,
-    explanation: "Hồ Chí Minh sinh ngày 19/5/1890 tại làng Sen, Nam Đàn, Nghệ An.",
-    category: 'tu-tuong-doc-lap',
-    difficulty: 'easy'
+    "id": 21,
+    "question": "'Kháng Nhật cứu nước' được xem là:",
+    "options": ["Cao trào cách mạng toàn dân", "Khởi nghĩa từng phần", "Chiến tranh nhân dân", "Đấu tranh chính trị"],
+    "correctAnswer": 0,
+    "explanation": "Phong trào kháng Nhật là cao trào cách mạng toàn dân trước Tổng khởi nghĩa.",
+    "category": "tu-tuong-xa-hoi-chu-nghia",
+    "difficulty": "medium"
   },
   {
-    id: 22,
-    question: "Tên thật của Hồ Chí Minh là gì?",
-    options: [
-      "Nguyễn Sinh Cung",
-      "Nguyễn Tất Thành",
-      "Nguyễn Ái Quốc",
-      "Hồ Chí Minh"
-    ],
-    correctAnswer: 0,
-    explanation: "Tên thật của Hồ Chí Minh là Nguyễn Sinh Cung, sau đổi thành Nguyễn Tất Thành.",
-    category: 'tu-tuong-doc-lap',
-    difficulty: 'easy'
+    "id": 22,
+    "question": "Đảng chủ trương kết hợp đấu tranh chính trị với vũ trang vì:",
+    "options": ["Để giảm tổn thất", "Phù hợp tình hình mới", "Có sự hỗ trợ quốc tế", "Phát triển kinh tế"],
+    "correctAnswer": 1,
+    "explanation": "Kết hợp chính trị và vũ trang giúp tận dụng thời cơ và phát huy sức mạnh toàn dân.",
+    "category": "tu-tuong-xa-hoi-chu-nghia",
+    "difficulty": "medium"
   },
   {
-    id: 23,
-    question: "Hồ Chí Minh ra đi tìm đường cứu nước năm nào?",
-    options: [
-      "1910",
-      "1911",
-      "1912",
-      "1913"
-    ],
-    correctAnswer: 1,
-    explanation: "Hồ Chí Minh ra đi tìm đường cứu nước năm 1911 trên tàu Amiral Latouche Tréville.",
-    category: 'tu-tuong-doc-lap',
-    difficulty: 'medium'
+    "id": 23,
+    "question": "'Toàn dân, toàn diện, lấy lực lượng chính trị làm nòng cốt' thể hiện phương châm của:",
+    "options": ["Chiến tranh nhân dân", "Tổng khởi nghĩa", "Đấu tranh vũ trang", "Phong trào Việt Minh"],
+    "correctAnswer": 1,
+    "explanation": "Đây là phương châm chỉ đạo cuộc Tổng khởi nghĩa Tháng Tám 1945.",
+    "category": "tu-tuong-xa-hoi-chu-nghia",
+    "difficulty": "medium"
   },
   {
-    id: 24,
-    question: "Hồ Chí Minh lần đầu tiên sử dụng bút danh 'Nguyễn Ái Quốc' khi nào?",
-    options: [
-      "1917",
-      "1918",
-      "1919",
-      "1920"
-    ],
-    correctAnswer: 2,
-    explanation: "Hồ Chí Minh lần đầu sử dụng bút danh 'Nguyễn Ái Quốc' năm 1919 khi gửi Bản yêu sách 8 điều tới Hội nghị Versailles.",
-    category: 'tu-tuong-doc-lap',
-    difficulty: 'medium'
+    "id": 24,
+    "question": "Cách mạng Tháng Tám là cuộc cách mạng:",
+    "options": ["Dân tộc dân chủ nhân dân", "Tư sản dân quyền", "Cải cách", "Xã hội chủ nghĩa"],
+    "correctAnswer": 0,
+    "explanation": "Cách mạng Tháng Tám là cuộc cách mạng dân tộc dân chủ nhân dân, mở đầu kỷ nguyên độc lập.",
+    "category": "tu-tuong-xa-hoi-chu-nghia",
+    "difficulty": "medium"
   },
   {
-    id: 25,
-    question: "Bản yêu sách 8 điều của Nguyễn Ái Quốc đòi hỏi điều gì?",
-    options: [
-      "Độc lập hoàn toàn cho Việt Nam",
-      "Quyền tự do, dân chủ cho người Việt ở thuộc địa",
-      "Đuổi Pháp ra khỏi Việt Nam",
-      "Thành lập chính phủ Việt Nam"
-    ],
-    correctAnswer: 1,
-    explanation: "Bản yêu sách 8 điều đòi hỏi quyền tự do, dân chủ cho người Việt Nam ở thuộc địa Đông Dương.",
-    category: 'tu-tuong-doc-lap',
-    difficulty: 'hard'
+    "id": 25,
+    "question": "Tính chất xã hội của Cách mạng Tháng Tám là:",
+    "options": ["Giải phóng dân tộc", "Cải cách kinh tế", "Hòa bình", "Văn hóa"],
+    "correctAnswer": 0,
+    "explanation": "Đây là cuộc cách mạng mang tính chất giải phóng dân tộc.",
+    "category": "tu-tuong-xa-hoi-chu-nghia",
+    "difficulty": "medium"
   },
   {
-    id: 26,
-    question: "Hồ Chí Minh gia nhập Đảng Cộng sản Pháp năm nào?",
-    options: [
-      "1919",
-      "1920",
-      "1921",
-      "1922"
-    ],
-    correctAnswer: 1,
-    explanation: "Hồ Chí Minh gia nhập Đảng Cộng sản Pháp năm 1920, đánh dấu bước ngoặt trong tư tưởng cách mạng.",
-    category: 'tu-tuong-xa-hoi',
-    difficulty: 'medium'
+    "id": 26,
+    "question": "Thắng lợi của cách mạng 1945 góp phần mở đầu:",
+    "options": ["Trào lưu cách mạng giải phóng dân tộc trên thế giới", "Chiến tranh lạnh", "Kinh tế bao cấp", "Chủ nghĩa thực dân mới"],
+    "correctAnswer": 0,
+    "explanation": "Thắng lợi năm 1945 cổ vũ mạnh mẽ phong trào giải phóng dân tộc toàn cầu.",
+    "category": "tu-tuong-xa-hoi-chu-nghia",
+    "difficulty": "medium"
   },
   {
-    id: 27,
-    question: "Tác phẩm 'Bản án chế độ thực dân Pháp' được viết năm nào?",
-    options: [
-      "1924",
-      "1925",
-      "1926",
-      "1927"
-    ],
-    correctAnswer: 1,
-    explanation: "Tác phẩm 'Bản án chế độ thực dân Pháp' được Hồ Chí Minh viết năm 1925, tố cáo tội ác của thực dân Pháp.",
-    category: 'tu-tuong-doc-lap',
-    difficulty: 'hard'
+    "id": 27,
+    "question": "Cách mạng Tháng Tám là sự kết hợp giữa hai nhiệm vụ:",
+    "options": ["Dân tộc và giai cấp", "Chính trị và văn hóa", "Quân sự và ngoại giao", "Kinh tế và xã hội"],
+    "correctAnswer": 0,
+    "explanation": "Cách mạng Tháng Tám kết hợp giữa nhiệm vụ dân tộc và giai cấp, thể hiện tư duy chiến lược của Đảng.",
+    "category": "ket-hop-hai-tu-tuong",
+    "difficulty": "medium"
   },
   {
-    id: 28,
-    question: "Hội Việt Nam Cách mạng Thanh niên được thành lập ở đâu?",
-    options: [
-      "Paris",
-      "Moscow",
-      "Quảng Châu",
-      "Hồng Kông"
-    ],
-    correctAnswer: 2,
-    explanation: "Hội Việt Nam Cách mạng Thanh niên được Hồ Chí Minh thành lập tại Quảng Châu, Trung Quốc năm 1925.",
-    category: 'ket-hop-hai-tu-tuong',
-    difficulty: 'medium'
+    "id": 28,
+    "question": "Việc thành lập Việt Minh thể hiện sự kết hợp giữa:",
+    "options": ["Độc lập dân tộc và đoàn kết xã hội chủ nghĩa", "Văn hóa và kinh tế", "Giai cấp và tư sản", "Cải cách và bảo thủ"],
+    "correctAnswer": 0,
+    "explanation": "Việt Minh là minh chứng cho sự kết hợp giữa tư tưởng độc lập dân tộc và đoàn kết giai cấp trong khối đại đoàn kết toàn dân.",
+    "category": "ket-hop-hai-tu-tuong",
+    "difficulty": "medium"
   },
   {
-    id: 29,
-    question: "Tạp chí 'Thanh niên' có ý nghĩa gì?",
-    options: [
-      "Chỉ tuyên truyền văn hóa",
-      "Tuyên truyền tư tưởng cách mạng và yêu nước",
-      "Chỉ giải trí cho thanh niên",
-      "Không có ý nghĩa đặc biệt"
-    ],
-    correctAnswer: 1,
-    explanation: "Tạp chí 'Thanh niên' do Hồ Chí Minh sáng lập để tuyên truyền tư tưởng cách mạng và lòng yêu nước cho thanh niên Việt Nam.",
-    category: 'ket-hop-hai-tu-tuong',
-    difficulty: 'easy'
+    "id": 29,
+    "question": "Sự kết hợp giữa đấu tranh chính trị và vũ trang giúp:",
+    "options": ["Hạn chế thiệt hại", "Huy động toàn dân", "Giảm bạo lực", "Kéo dài thời gian"],
+    "correctAnswer": 1,
+    "explanation": "Kết hợp hai hình thức này giúp huy động toàn dân tham gia cách mạng, tạo sức mạnh tổng hợp.",
+    "category": "ket-hop-hai-tu-tuong",
+    "difficulty": "medium"
   },
   {
-    id: 30,
-    question: "Hồ Chí Minh học tập ở Liên Xô trong thời gian nào?",
-    options: [
-      "1923-1924",
-      "1924-1925",
-      "1924-1927",
-      "1925-1927"
-    ],
-    correctAnswer: 2,
-    explanation: "Hồ Chí Minh học tập tại Liên Xô từ 1924-1927, nghiên cứu sâu về chủ nghĩa Mác-Lênin.",
-    category: 'tu-tuong-xa-hoi',
-    difficulty: 'hard'
+    "id": 30,
+    "question": "Hội nghị Trung ương 8 kết hợp giải quyết mâu thuẫn:",
+    "options": ["Dân tộc với đế quốc", "Dân tộc với giai cấp", "Giai cấp với tôn giáo", "Nông dân với địa chủ"],
+    "correctAnswer": 0,
+    "explanation": "Hội nghị Trung ương 8 xác định mâu thuẫn chủ yếu là giữa dân tộc Việt Nam với đế quốc xâm lược.",
+    "category": "ket-hop-hai-tu-tuong",
+    "difficulty": "medium"
   },
   {
-    id: 31,
-    question: "Tác phẩm 'Đường Kách Mệnh' được viết khi nào?",
-    options: [
-      "1925",
-      "1926",
-      "1927",
-      "1928"
-    ],
-    correctAnswer: 2,
-    explanation: "Tác phẩm 'Đường Kách Mệnh' được Hồ Chí Minh viết năm 1927, trình bày con đường cách mạng của Việt Nam.",
-    category: 'ket-hop-hai-tu-tuong',
-    difficulty: 'medium'
+    "id": 31,
+    "question": "Đảng vừa giữ vững mục tiêu lâu dài, vừa linh hoạt sách lược — thể hiện:",
+    "options": ["Tư duy cứng nhắc", "Bản lĩnh và sáng tạo", "Thay đổi ngẫu nhiên", "Phụ thuộc quốc tế"],
+    "correctAnswer": 1,
+    "explanation": "Đảng thể hiện bản lĩnh chính trị vững vàng và sự sáng tạo trong chỉ đạo cách mạng.",
+    "category": "ket-hop-hai-tu-tuong",
+    "difficulty": "medium"
   },
   {
-    id: 32,
-    question: "Hồ Chí Minh về nước lần cuối năm nào?",
-    options: [
-      "1940",
-      "1941",
-      "1942",
-      "1943"
-    ],
-    correctAnswer: 1,
-    explanation: "Hồ Chí Minh về nước lần cuối năm 1941, trực tiếp lãnh đạo cách mạng Việt Nam.",
-    category: 'van-dung-thuc-tien',
-    difficulty: 'easy'
+    "id": 32,
+    "question": "Hồ Chí Minh kết hợp giữa lý luận Mác – Lênin và thực tiễn Việt Nam là biểu hiện của:",
+    "options": ["Tính sáng tạo cách mạng", "Sao chép nguyên mẫu", "Chủ nghĩa dân tộc", "Lý luận khép kín"],
+    "correctAnswer": 0,
+    "explanation": "Hồ Chí Minh vận dụng sáng tạo chủ nghĩa Mác – Lênin vào thực tiễn Việt Nam, phù hợp điều kiện lịch sử cụ thể.",
+    "category": "ket-hop-hai-tu-tuong",
+    "difficulty": "hard"
   },
   {
-    id: 33,
-    question: "Căn cứ địa Pác Bó có ý nghĩa gì?",
-    options: [
-      "Chỉ là nơi ẩn náu",
-      "Nơi kết hợp lý luận với thực tiễn cách mạng Việt Nam",
-      "Chỉ là nơi nghỉ ngơi",
-      "Không có ý nghĩa đặc biệt"
-    ],
-    correctAnswer: 1,
-    explanation: "Pác Bó là nơi Hồ Chí Minh kết hợp lý luận Mác-Lênin với thực tiễn cách mạng Việt Nam, hình thành tư tưởng cách mạng hoàn chỉnh.",
-    category: 'ket-hop-hai-tu-tuong',
-    difficulty: 'hard'
+    "id": 33,
+    "question": "Cách mạng Tháng Tám kết hợp thành công giữa:",
+    "options": ["Sức mạnh dân tộc và sức mạnh thời đại", "Kinh tế và chính trị", "Văn hóa và xã hội", "Quân sự và ngoại giao"],
+    "correctAnswer": 0,
+    "explanation": "Thắng lợi 1945 chứng minh sự kết hợp giữa sức mạnh dân tộc và sức mạnh thời đại.",
+    "category": "ket-hop-hai-tu-tuong",
+    "difficulty": "hard"
   },
   {
-    id: 34,
-    question: "Tên gọi 'Hồ Chí Minh' có nghĩa là gì?",
-    options: [
-      "Người sáng suốt",
-      "Người có chí hướng về ánh sáng",
-      "Người anh hùng",
-      "Người lãnh đạo"
-    ],
-    correctAnswer: 1,
-    explanation: "Tên 'Hồ Chí Minh' có nghĩa là 'người có chí hướng về ánh sáng', thể hiện lý tưởng cao đẹp của Người.",
-    category: 'tu-tuong-doc-lap',
-    difficulty: 'medium'
+    "id": 34,
+    "question": "Sự lãnh đạo của Đảng là kết quả của:",
+    "options": ["Ngẫu nhiên", "Quá trình kết hợp lý luận và thực tiễn", "May mắn", "Ngoại lực"],
+    "correctAnswer": 1,
+    "explanation": "Sự lãnh đạo của Đảng hình thành từ quá trình kết hợp giữa lý luận Mác – Lênin và thực tiễn đấu tranh cách mạng.",
+    "category": "ket-hop-hai-tu-tuong",
+    "difficulty": "medium"
   },
   {
-    id: 35,
-    question: "Cách mạng tháng Tám 1945 thành công nhờ điều gì?",
-    options: [
-      "Chỉ nhờ may mắn",
-      "Chỉ nhờ sức mạnh quân sự",
-      "Nhờ sự kết hợp đúng đắn giữa độc lập dân tộc và dân chủ nhân dân",
-      "Chỉ nhờ sự giúp đỡ của nước ngoài"
-    ],
-    correctAnswer: 2,
-    explanation: "Cách mạng tháng Tám thành công nhờ sự kết hợp đúng đắn giữa mục tiêu độc lập dân tộc và dân chủ nhân dân trong tư tưởng Hồ Chí Minh.",
-    category: 'van-dung-thuc-tien',
-    difficulty: 'hard'
+    "id": 35,
+    "question": "Bài học lớn nhất của Cách mạng Tháng Tám là:",
+    "options": ["Chớp thời cơ, phát huy sức mạnh toàn dân", "Phụ thuộc ngoại viện", "Đấu tranh giai cấp", "Cải cách hành chính"],
+    "correctAnswer": 0,
+    "explanation": "Thắng lợi 1945 khẳng định bài học quý: chớp thời cơ và phát huy sức mạnh toàn dân.",
+    "category": "van-dung-thuc-tien",
+    "difficulty": "easy"
   },
   {
-    id: 36,
-    question: "Theo Hồ Chí Minh, đạo đức cách mạng có đặc điểm gì?",
-    options: [
-      "Chỉ cần trung thành với Đảng",
-      "Kết hợp yêu nước, yêu dân với yêu chủ nghĩa xã hội",
-      "Chỉ cần hy sinh cá nhân",
-      "Không cần có nguyên tắc"
-    ],
-    correctAnswer: 1,
-    explanation: "Đạo đức cách mạng theo Hồ Chí Minh là sự kết hợp giữa lòng yêu nước, yêu dân với lòng yêu chủ nghĩa xã hội.",
-    category: 'tu-tuong-xa-hoi',
-    difficulty: 'medium'
+    "id": 36,
+    "question": "Trong công cuộc đổi mới, bài học về chủ động, sáng tạo từ Cách mạng 1945 giúp ta:",
+    "options": ["Tự cô lập", "Linh hoạt hội nhập", "Giữ nguyên mô hình cũ", "Phụ thuộc kinh tế"],
+    "correctAnswer": 1,
+    "explanation": "Tinh thần chủ động sáng tạo từ 1945 giúp Việt Nam hội nhập năng động và hiệu quả trong thời đại mới.",
+    "category": "van-dung-thuc-tien",
+    "difficulty": "medium"
   },
   {
-    id: 37,
-    question: "Tư tưởng 'Học, học nữa, học mãi' thể hiện điều gì?",
-    options: [
-      "Chỉ học sách vở",
-      "Học để phục vụ cách mạng và nhân dân",
-      "Học để làm quan",
-      "Học để khoe khoang"
-    ],
-    correctAnswer: 1,
-    explanation: "Tư tưởng 'Học, học nữa, học mãi' của Hồ Chí Minh nhấn mạnh học tập để phục vụ cách mạng và nhân dân.",
-    category: 'tu-tuong-xa-hoi',
-    difficulty: 'easy'
+    "id": 37,
+    "question": "Đường lối 'lấy dân làm gốc' hiện nay bắt nguồn từ:",
+    "options": ["Cách mạng Tháng Tám", "Cải cách ruộng đất", "Hiệp định Giơ-ne-vơ", "Chiến dịch Điện Biên Phủ"],
+    "correctAnswer": 0,
+    "explanation": "Thành công của Cách mạng Tháng Tám là kết quả của việc lấy dân làm gốc trong mọi hoạt động.",
+    "category": "van-dung-thuc-tien",
+    "difficulty": "easy"
   },
   {
-    id: 38,
-    question: "Phong cách Hồ Chí Minh có đặc điểm gì?",
-    options: [
-      "Xa hoa, phô trương",
-      "Giản dị, gần gũi với nhân dân",
-      "Nghiêm khắc, xa cách",
-      "Không có phong cách riêng"
-    ],
-    correctAnswer: 1,
-    explanation: "Phong cách Hồ Chí Minh đặc trưng bởi sự giản dị, gần gũi với nhân dân, thể hiện tư tưởng 'Dân là gốc'.",
-    category: 'tu-tuong-xa-hoi',
-    difficulty: 'easy'
+    "id": 38,
+    "question": "Bài học về 'chớp thời cơ' có ý nghĩa trong:",
+    "options": ["Công nghiệp hóa – hiện đại hóa", "Ngoại giao quân sự", "Cải cách hành chính", "Hợp tác khu vực"],
+    "correctAnswer": 0,
+    "explanation": "Bài học 'chớp thời cơ' được vận dụng hiệu quả trong công nghiệp hóa và phát triển kinh tế hiện nay.",
+    "category": "van-dung-thuc-tien",
+    "difficulty": "medium"
   },
   {
-    id: 39,
-    question: "Hồ Chí Minh qua đời vào ngày nào?",
-    options: [
-      "2/9/1969",
-      "3/9/1969",
-      "1/9/1969",
-      "4/9/1969"
-    ],
-    correctAnswer: 0,
-    explanation: "Hồ Chí Minh qua đời vào ngày 2/9/1969, đúng ngày Quốc khánh Việt Nam.",
-    category: 'y-nghia-lich-su',
-    difficulty: 'easy'
+    "id": 39,
+    "question": "Cách mạng Tháng Tám cho thấy tầm quan trọng của:",
+    "options": ["Lãnh đạo thống nhất, đoàn kết dân tộc", "Sự hỗ trợ quốc tế", "Bạo lực chính trị", "Kinh tế thị trường"],
+    "correctAnswer": 0,
+    "explanation": "Đoàn kết dân tộc và sự lãnh đạo thống nhất là nhân tố quyết định thắng lợi.",
+    "category": "van-dung-thuc-tien",
+    "difficulty": "medium"
   },
   {
-    id: 40,
-    question: "Di chúc Hồ Chí Minh được công bố khi nào?",
-    options: [
-      "Ngay sau khi Người mất",
-      "Sau Đại hội Đảng IV",
-      "Sau khi thống nhất đất nước",
-      "Một năm sau khi Người mất"
-    ],
-    correctAnswer: 2,
-    explanation: "Di chúc Hồ Chí Minh được công bố sau khi thống nhất đất nước năm 1975, theo di nguyện của Người.",
-    category: 'y-nghia-lich-su',
-    difficulty: 'medium'
+    "id": 40,
+    "question": "Tinh thần đoàn kết của Việt Minh là nền tảng cho:",
+    "options": ["Khối đại đoàn kết toàn dân hiện nay", "Cải cách giáo dục", "Quản lý hành chính", "Ngoại thương"],
+    "correctAnswer": 0,
+    "explanation": "Tinh thần đoàn kết của Việt Minh là tiền đề xây dựng khối đại đoàn kết toàn dân tộc hiện nay.",
+    "category": "van-dung-thuc-tien",
+    "difficulty": "medium"
   },
   {
-    id: 41,
-    question: "Tư tưởng Hồ Chí Minh về xây dựng Đảng có đặc điểm gì?",
-    options: [
-      "Đảng chỉ cần có kỷ luật",
-      "Đảng phải là đội tiên phong của giai cấp công nhân và nhân dân lao động",
-      "Đảng chỉ cần có nhiều đảng viên",
-      "Đảng không cần có nguyên tắc"
-    ],
-    correctAnswer: 1,
-    explanation: "Theo Hồ Chí Minh, Đảng phải là đội tiên phong của giai cấp công nhân và nhân dân lao động, phục vụ lợi ích của dân tộc và nhân dân.",
-    category: 'tu-tuong-xa-hoi',
-    difficulty: 'hard'
+    "id": 41,
+    "question": "Bài học từ Cách mạng Tháng Tám về công tác tuyên truyền là:",
+    "options": ["Phải xuất phát từ quần chúng", "Phải do cấp cao thực hiện", "Tập trung ở đô thị", "Chỉ dành cho thanh niên"],
+    "correctAnswer": 0,
+    "explanation": "Công tác tuyên truyền phải xuất phát từ nhân dân và hướng về nhân dân để đạt hiệu quả cao.",
+    "category": "van-dung-thuc-tien",
+    "difficulty": "easy"
   },
   {
-    id: 42,
-    question: "Quan điểm của Hồ Chí Minh về văn hóa là gì?",
-    options: [
-      "Văn hóa dân tộc, khoa học, đại chúng",
-      "Chỉ cần văn hóa dân tộc",
-      "Chỉ cần văn hóa khoa học",
-      "Văn hóa không quan trọng"
-    ],
-    correctAnswer: 0,
-    explanation: "Hồ Chí Minh chủ trương xây dựng nền văn hóa Việt Nam mang tính dân tộc, khoa học và đại chúng.",
-    category: 'tu-tuong-xa-hoi',
-    difficulty: 'medium'
+    "id": 42,
+    "question": "Thắng lợi của Cách mạng Tháng Tám mở ra kỷ nguyên:",
+    "options": ["Độc lập, tự do, đi lên CNXH", "Phong kiến", "Thực dân mới", "Chiến tranh lạnh"],
+    "correctAnswer": 0,
+    "explanation": "Cách mạng Tháng Tám mở ra kỷ nguyên độc lập, tự do, đi lên chủ nghĩa xã hội cho dân tộc Việt Nam.",
+    "category": "y-nghia-lich-su",
+    "difficulty": "easy"
   },
   {
-    id: 43,
-    question: "Tư tưởng Hồ Chí Minh về giáo dục có đặc điểm gì?",
-    options: [
-      "Chỉ dạy kiến thức",
-      "Kết hợp giáo dục đức, trí, thể, mỹ",
-      "Chỉ dạy đạo đức",
-      "Giáo dục không quan trọng"
-    ],
-    correctAnswer: 1,
-    explanation: "Hồ Chí Minh chủ trương giáo dục toàn diện, kết hợp đức, trí, thể, mỹ để phát triển con người mới.",
-    category: 'tu-tuong-xa-hoi',
-    difficulty: 'easy'
+    "id": 43,
+    "question": "Cách mạng Tháng Tám là thắng lợi của:",
+    "options": ["Phe Đồng minh", "Đường lối giải phóng dân tộc đúng đắn của Đảng", "Tư sản dân tộc", "Đế quốc"],
+    "correctAnswer": 1,
+    "explanation": "Cách mạng là thắng lợi của đường lối cách mạng đúng đắn và sáng tạo của Đảng Cộng sản Việt Nam.",
+    "category": "y-nghia-lich-su",
+    "difficulty": "medium"
   },
   {
-    id: 44,
-    question: "Theo Hồ Chí Minh, mối quan hệ giữa cá nhân và tập thể như thế nào?",
-    options: [
-      "Cá nhân quan trọng hơn tập thể",
-      "Tập thể quan trọng hơn cá nhân",
-      "Cá nhân và tập thể hài hòa, thống nhất",
-      "Không có mối quan hệ gì"
-    ],
-    correctAnswer: 2,
-    explanation: "Hồ Chí Minh chủ trương sự hài hòa, thống nhất giữa lợi ích cá nhân và lợi ích tập thể, dân tộc.",
-    category: 'tu-tuong-xa-hoi',
-    difficulty: 'medium'
+    "id": 44,
+    "question": "Cách mạng Tháng Tám chứng minh vai trò của:",
+    "options": ["Quần chúng nhân dân là động lực cách mạng", "Giai cấp tư sản", "Quốc tế vô sản", "Chính quyền phong kiến"],
+    "correctAnswer": 0,
+    "explanation": "Thắng lợi của cách mạng chứng minh quần chúng nhân dân là động lực quyết định.",
+    "category": "y-nghia-lich-su",
+    "difficulty": "medium"
   },
   {
-    id: 45,
-    question: "Tư tưởng Hồ Chí Minh về đoàn kết quốc tế có đặc điểm gì?",
-    options: [
-      "Chỉ đoàn kết với các nước xã hội chủ nghĩa",
-      "Đoàn kết với tất cả các lực lượng tiến bộ trên thế giới",
-      "Không cần đoàn kết quốc tế",
-      "Chỉ đoàn kết với các nước láng giềng"
-    ],
-    correctAnswer: 1,
-    explanation: "Hồ Chí Minh chủ trương đoàn kết với tất cả các lực lượng tiến bộ, yêu chuộng hòa bình và công lý trên thế giới.",
-    category: 'y-nghia-lich-su',
-    difficulty: 'hard'
+    "id": 45,
+    "question": "Cách mạng Tháng Tám ảnh hưởng mạnh mẽ đến:",
+    "options": ["Phong trào giải phóng dân tộc châu Á – Phi", "Cách mạng tư sản châu Âu", "Chính sách thuộc địa Anh", "Chiến tranh lạnh"],
+    "correctAnswer": 0,
+    "explanation": "Cách mạng Tháng Tám cổ vũ phong trào đấu tranh giải phóng dân tộc ở châu Á và châu Phi.",
+    "category": "y-nghia-lich-su",
+    "difficulty": "medium"
   },
   {
-    id: 46,
-    question: "Tư tưởng Hồ Chí Minh về xây dựng nhà nước có đặc điểm gì?",
-    options: [
-      "Nhà nước của dân, do dân, vì dân",
-      "Nhà nước chỉ của giai cấp thống trị",
-      "Nhà nước không cần có nguyên tắc",
-      "Nhà nước chỉ cần có quyền lực"
-    ],
-    correctAnswer: 0,
-    explanation: "Hồ Chí Minh chủ trương xây dựng nhà nước của dân, do dân và vì dân, thể hiện bản chất dân chủ nhân dân.",
-    category: 'tu-tuong-xa-hoi',
-    difficulty: 'medium'
+    "id": 46,
+    "question": "Ý nghĩa to lớn nhất của Cách mạng Tháng Tám là:",
+    "options": ["Đưa Việt Nam trở thành quốc gia độc lập", "Cải cách ruộng đất", "Tham gia phe Đồng minh", "Đổi mới kinh tế"],
+    "correctAnswer": 0,
+    "explanation": "Cách mạng Tháng Tám giành độc lập dân tộc, lập nên nước Việt Nam Dân chủ Cộng hòa.",
+    "category": "y-nghia-lich-su",
+    "difficulty": "medium"
   },
   {
-    id: 47,
-    question: "Theo Hồ Chí Minh, yếu tố nào quyết định thắng lợi của cách mạng?",
-    options: [
-      "Vũ khí hiện đại",
-      "Sức mạnh của nhân dân",
-      "Sự giúp đỡ của nước ngoài",
-      "May mắn"
-    ],
-    correctAnswer: 1,
-    explanation: "Hồ Chí Minh khẳng định sức mạnh của nhân dân là yếu tố quyết định thắng lợi của cách mạng.",
-    category: 'van-dung-thuc-tien',
-    difficulty: 'easy'
+    "id": 47,
+    "question": "Cách mạng Tháng Tám mở đầu thời kỳ:",
+    "options": ["Nhân dân làm chủ đất nước", "Phong kiến trở lại", "Xâm lược mới", "Liên minh quốc tế"],
+    "correctAnswer": 0,
+    "explanation": "Sau thắng lợi 1945, nhân dân Việt Nam trở thành người làm chủ đất nước và vận mệnh dân tộc.",
+    "category": "y-nghia-lich-su",
+    "difficulty": "medium"
   },
   {
-    id: 48,
-    question: "Tư tưởng Hồ Chí Minh về hòa bình có đặc điểm gì?",
-    options: [
-      "Hòa bình bằng mọi giá",
-      "Hòa bình trong độc lập và tự do",
-      "Không cần hòa bình",
-      "Hòa bình chỉ là khẩu hiệu"
-    ],
-    correctAnswer: 1,
-    explanation: "Hồ Chí Minh chủ trương hòa bình nhưng phải trong độc lập và tự do, không chấp nhận hòa bình nô lệ.",
-    category: 'tu-tuong-doc-lap',
-    difficulty: 'hard'
+    "id": 48,
+    "question": "Tư tưởng 'dân tộc trên hết, Tổ quốc trên hết' được thể hiện rõ nhất trong:",
+    "options": ["Hội nghị TW 8", "Cải cách ruộng đất", "Hiệp định Giơ-ne-vơ", "Kháng chiến chống Mỹ"],
+    "correctAnswer": 0,
+    "explanation": "Hội nghị TW8 khẳng định tư tưởng dân tộc trên hết, là kim chỉ nam cho cách mạng giải phóng dân tộc.",
+    "category": "y-nghia-lich-su",
+    "difficulty": "easy"
   },
   {
-    id: 49,
-    question: "Tư tưởng Hồ Chí Minh có ảnh hưởng gì đến Hiến pháp Việt Nam?",
-    options: [
-      "Không có ảnh hưởng",
-      "Là nền tảng tư tưởng cho các Hiến pháp Việt Nam",
-      "Chỉ ảnh hưởng một phần",
-      "Chỉ có ý nghĩa tham khảo"
-    ],
-    correctAnswer: 1,
-    explanation: "Tư tưởng Hồ Chí Minh là nền tảng tư tưởng cho các Hiến pháp Việt Nam, thể hiện trong các nguyên tắc cơ bản của nhà nước.",
-    category: 'y-nghia-lich-su',
-    difficulty: 'medium'
+    "id": 49,
+    "question": "Thắng lợi năm 1945 cho thấy sự kết hợp giữa:",
+    "options": ["Đảng – Chủ tịch Hồ Chí Minh – Nhân dân", "Đảng – Quốc tế – Nhật", "Việt Minh – Mỹ", "Chính trị – kinh tế"],
+    "correctAnswer": 0,
+    "explanation": "Ba nhân tố làm nên thắng lợi là sự lãnh đạo của Đảng, Chủ tịch Hồ Chí Minh và sức mạnh toàn dân.",
+    "category": "y-nghia-lich-su",
+    "difficulty": "medium"
   },
   {
-    id: 50,
-    question: "Giá trị cốt lõi của tư tưởng Hồ Chí Minh là gì?",
-    options: [
-      "Chỉ có độc lập dân tộc",
-      "Chỉ có chủ nghĩa xã hội",
-      "Độc lập dân tộc gắn liền với chủ nghĩa xã hội vì hạnh phúc của nhân dân",
-      "Không có giá trị cốt lõi"
+    "id": 50,
+    "question": "Kết luận khẳng định giá trị lịch sử của Cách mạng Tháng Tám là:",
+    "options": ["Không phải 'ăn may', mà là kết quả tất yếu của sự chuẩn bị lâu dài và chủ động của Đảng", "Một hiện tượng ngẫu nhiên", "Do yếu tố quốc tế", "Do Nhật đầu hàng"],
+    "correctAnswer": 0,
+    "explanation": "Cách mạng Tháng Tám là kết quả tất yếu của quá trình chuẩn bị kỹ lưỡng, không phải sự 'ăn may'.",
+    "category": "y-nghia-lich-su",
+    "difficulty": "hard"
+  },
+  {
+    "id": 51,
+    "question": "Trước Cách mạng Tháng Tám 1945, Việt Nam đang là thuộc địa của nước nào?",
+    "options": ["Anh", "Pháp", "Nhật", "Mỹ"],
+    "correctAnswer": 1,
+    "explanation": "Trước năm 1945, Việt Nam là thuộc địa của thực dân Pháp, nằm trong Liên bang Đông Dương.",
+    "category": "mo-bai-vui",
+    "difficulty": "easy"
+  },
+  {
+    "id": 52,
+    "question": "Theo bạn, điều gì là quan trọng nhất để giành lại độc lập dân tộc?",
+    "options": [
+      "Có vũ khí hiện đại",
+      "Có tinh thần đoàn kết toàn dân",
+      "Có sự giúp đỡ quốc tế",
+      "Có lợi thế địa lý"
     ],
-    correctAnswer: 2,
-    explanation: "Giá trị cốt lõi của tư tưởng Hồ Chí Minh là sự gắn bó chặt chẽ giữa độc lập dân tộc và chủ nghĩa xã hội vì mục tiêu cao cả: hạnh phúc của nhân dân.",
-    category: 'y-nghia-lich-su',
-    difficulty: 'hard'
+    "correctAnswer": 1,
+    "explanation": "Đoàn kết toàn dân tộc là yếu tố cốt lõi dẫn đến thắng lợi của cách mạng Việt Nam.",
+    "category": "mo-bai-vui",
+    "difficulty": "easy"
+  },
+  {
+    "id": 53,
+    "question": "Nếu bạn sống ở Việt Nam năm 1945, bạn nghĩ mình sẽ tham gia phong trào cách mạng bằng cách nào?",
+    "options": [
+      "Tham gia Việt Minh và tuyên truyền",
+      "Giúp đỡ kháng chiến bằng lương thực",
+      "Trở thành chiến sĩ du kích",
+      "Trốn đi nước ngoài để quan sát tình hình 😅"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đây là câu hỏi mở gợi suy nghĩ – dù bạn chọn cách nào, tinh thần yêu nước đều đáng quý!",
+    "category": "mo-bai-vui",
+    "difficulty": "easy"
+  },
+  {
+    "id": 54,
+    "question": "Nếu có mạng xã hội năm 1945, khẩu hiệu nào theo bạn sẽ 'trend' nhất?",
+    "options": [
+      "#ĐộcLậpDânTộc",
+      "#CơmÁoHòaBình",
+      "#ViệtMinhMuônNăm",
+      "#ThoátKhỏiPhápNhật"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Chắc chắn #ĐộcLậpDânTộc sẽ hot nhất vì đó là khát vọng cháy bỏng của người Việt lúc bấy giờ.",
+    "category": "mo-bai-vui",
+    "difficulty": "easy"
+  },
+  {
+    "id": 55,
+    "question": "Nếu bạn là người dân năm 1945 nghe tin Nhật đầu hàng Đồng minh, bạn sẽ cảm thấy thế nào?",
+    "options": [
+      "Mừng rỡ vì sắp được độc lập!",
+      "Hoang mang không hiểu chuyện gì xảy ra 🤔",
+      "Lo sợ chiến tranh quay lại",
+      "Đi tìm gạo vì vẫn đang đói 😢"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đa số người dân lúc đó vừa vui mừng vừa hoang mang – nhưng ai cũng khát khao độc lập.",
+    "category": "mo-bai-vui",
+    "difficulty": "easy"
+  },
+  {
+    "id": 56,
+    "question": "Nếu bạn được quay ngược thời gian về năm 1945, điều đầu tiên bạn muốn làm là gì?",
+    "options": [
+      "Tham gia khởi nghĩa giành chính quyền",
+      "Gặp Chủ tịch Hồ Chí Minh để xin chữ ký 😄",
+      "Ghi lại lịch sử bằng điện thoại để livestream",
+      "Chụp ảnh selfie tại Quảng trường Ba Đình"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Dù chọn gì, chắc ai cũng muốn chứng kiến khoảnh khắc thiêng liêng của Cách mạng Tháng Tám.",
+    "category": "mo-bai-vui",
+    "difficulty": "easy"
   }
 ];
 
 export const quizCategories = [
-  { id: 'tu-tuong-doc-lap', name: 'Tư tưởng độc lập dân tộc', color: 'bg-blue-500' },
-  { id: 'tu-tuong-xa-hoi', name: 'Tư tưởng xã hội chủ nghĩa', color: 'bg-red-500' },
+  { id: 'tu-tuong-doc-lap-dan-toc', name: 'Tư tưởng độc lập dân tộc', color: 'bg-blue-500' },
+  { id: 'tu-tuong-xa-hoi-chu-nghia', name: 'Tư tưởng xã hội chủ nghĩa', color: 'bg-red-500' },
   { id: 'ket-hop-hai-tu-tuong', name: 'Kết hợp hai tư tưởng', color: 'bg-green-500' },
   { id: 'van-dung-thuc-tien', name: 'Vận dụng thực tiễn', color: 'bg-purple-500' },
-  { id: 'y-nghia-lich-su', name: 'Ý nghĩa lịch sử', color: 'bg-orange-500' }
+  { id: 'y-nghia-lich-su', name: 'Ý nghĩa lịch sử', color: 'bg-orange-500' },
+  { id: 'mo-bai-vui', name: 'Mở bài vui', color: 'bg-pink-500' }
 ];
 
 export const difficultyLevels = [
