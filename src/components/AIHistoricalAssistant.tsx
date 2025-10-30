@@ -37,94 +37,39 @@ const AIHistoricalAssistant = () => {
 
   const aiPersona: Persona = {
     id: 'ai-assistant',
-    name: 'AI Tư tưởng Hồ Chí Minh',
-    title: 'Trợ lý AI chuyên về tư tưởng Hồ Chí Minh',
+    name: 'AI Cách mạng Tháng Tám',
+    title: 'Trợ lý AI về phong trào giải phóng dân tộc (1939–1945)',
     avatar: '/images/img2.svg',
-    description: 'AI được huấn luyện chuyên sâu về tư tưởng độc lập dân tộc và chủ nghĩa xã hội của Hồ Chí Minh',
+    description: 'AI tập trung vào chuyển hướng chỉ đạo (1939–1941), chuẩn bị lực lượng (1941–1945) và Tổng khởi nghĩa Tháng Tám 1945.',
     color: 'from-blue-500 to-purple-600',
     personality: 'intelligent'
   }
 
   const suggestedQuestions = [
-    "Tư tưởng độc lập dân tộc của Hồ Chí Minh có đặc điểm gì?",
-    "Chủ nghĩa xã hội trong tư tưởng Hồ Chí Minh như thế nào?",
-    "Hai tư tưởng này kết hợp với nhau ra sao?",
-    "Ý nghĩa lịch sử của tư tưởng Hồ Chí Minh?",
-    "Tuyên ngôn độc lập 1945 thể hiện tư tưởng gì?",
-    "Tư tưởng Hồ Chí Minh có ảnh hưởng gì đến hiện tại?",
-    "Đặc điểm sáng tạo trong tư tưởng Hồ Chí Minh?",
-    "Giá trị thời đại của tư tưởng Hồ Chí Minh?"
+    "Vì sao Đảng chuyển hướng chiến lược 1939–1941?",
+    "Việt Minh ra đời nhằm mục tiêu gì?",
+    "Chỉ thị Nhật – Pháp bắn nhau (3/1945) nói gì?",
+    "Tổng khởi nghĩa Tháng Tám diễn ra như thế nào?",
+    "Ý nghĩa lịch sử của Cách mạng Tháng Tám 1945?"
   ]
 
   const initialMessage = useMemo(() =>
-    "Xin chào! Tôi là AI Tư tưởng Hồ Chí Minh, được huấn luyện chuyên sâu về tư tưởng độc lập dân tộc và chủ nghĩa xã hội của Chủ tịch Hồ Chí Minh. Tôi có thể giúp bạn tìm hiểu về quá trình hình thành, đặc điểm, sự kết hợp hài hòa giữa hai tư tưởng này và ý nghĩa lịch sử của chúng. Bạn muốn tìm hiểu về vấn đề gì?"
-  , [])
+    "Xin chào! Tôi là AI Cách mạng Tháng Tám, tập trung giai đoạn 1939–1945. Tôi có thể giúp bạn về: chuyển hướng 1939–1941, xây dựng lực lượng 1941–1945, Chỉ thị 3/1945, Tổng khởi nghĩa 8/1945 và ý nghĩa lịch sử. Bạn muốn bắt đầu ở phần nào?"
+    , [])
 
   const getOfflineResponse = (message: string): string | null => {
     const lowerMessage = message.toLowerCase()
 
     const responses: { [key: string]: string } = {
-      "tư tưởng độc lập dân tộc": `Tư tưởng độc lập dân tộc của Hồ Chí Minh:
+      "hội nghị tw6": `Hội nghị TW6 (11/1939): Đảng chuyển hướng, đặt GIẢI PHÓNG DÂN TỘC lên hàng đầu, tạm gác khẩu hiệu ruộng đất. Đây là bước ngoặt mở đầu thời kỳ tiền khởi nghĩa.`,
 
-🏛️ **Bản chất**: Giải phóng dân tộc khỏi ách thống trị của thực dân, đế quốc
+      "hội nghị tw8": `Hội nghị TW8 (5/1941, Pác Bó – Nguyễn Ái Quốc chủ trì): thành lập Mặt trận Việt Minh; xác định giải phóng dân tộc là nhiệm vụ cần kíp; chuẩn bị khởi nghĩa vũ trang.`,
 
-🌟 **Đặc điểm**:
-• Độc lập chính trị hoàn toàn
-• Tự chủ kinh tế
-• Bảo vệ chủ quyền lãnh thổ
-• Bình đẳng dân tộc
+      "việt minh": `Việt Nam Độc lập Đồng minh (Việt Minh, 5/1941): mặt trận đoàn kết toàn dân, tập hợp mọi lực lượng yêu nước để đánh đuổi đế quốc, giành độc lập.`,
 
-🎯 **Mục tiêu**: Xây dựng nước Việt Nam độc lập, tự do, hạnh phúc
+      "tổng khởi nghĩa": `Tổng khởi nghĩa (8/1945): 14–28/8 giành chính quyền trên cả nước; 19/8 Hà Nội, 23/8 Huế, 25/8 Sài Gòn. Ngày 2/9, Chủ tịch Hồ Chí Minh đọc Tuyên ngôn Độc lập.`,
 
-📜 **Thể hiện**: Tuyên ngôn độc lập 2/9/1945`,
-
-      "chủ nghĩa xã hội": `Tư tưởng chủ nghĩa xã hội của Hồ Chí Minh:
-
-⚖️ **Công bằng xã hội**: Xóa bỏ bóc lột, áp bức
-
-👥 **Dân chủ nhân dân**: Quyền làm chủ của nhân dân lao động
-
-🏭 **Kinh tế**: Phát triển kinh tế vì con người
-
-🎓 **Văn hóa**: Xây dựng nền văn hóa dân tộc, khoa học, đại chúng
-
-🌱 **Đặc sắc**: Phù hợp với điều kiện Việt Nam`,
-
-      "kết hợp": `Sự kết hợp tư tưởng độc lập dân tộc và chủ nghĩa xã hội:
-
-🤝 **Hài hòa**: Hai tư tưởng bổ trợ, thống nhất với nhau
-
-🎯 **Mục tiêu chung**: Giải phóng dân tộc và giải phóng xã hội
-
-⚡ **Sáng tạo**: Vận dụng Mác-Lênin vào điều kiện Việt Nam
-
-🏗️ **Thực tiễn**: Từ đấu tranh giải phóng đến xây dựng đất nước
-
-🌟 **Ý nghĩa**: Tạo nên con đường cách mạng độc đáo của Việt Nam`,
-
-      "ý nghĩa": `Ý nghĩa lịch sử của tư tưởng Hồ Chí Minh:
-
-🇻🇳 **Đối với Việt Nam**: Dẫn dắt cách mạng thành công, xây dựng đất nước
-
-🌍 **Đối với thế giới**: Góp phần vào phong trào giải phóng dân tộc
-
-📚 **Giá trị lý luận**: Phát triển sáng tạo chủ nghĩa Mác-Lênin
-
-⏰ **Tính thời đại**: Vẫn có giá trị định hướng hiện tại
-
-🎓 **Di sản**: Tài sản tinh thần quý báu của dân tộc`,
-
-      "tuyên ngôn độc lập": `Tuyên ngôn độc lập 2/9/1945:
-
-📜 **Ý nghĩa**: Thể hiện rõ nét tư tưởng độc lập dân tộc
-
-🏛️ **Nội dung**: Tuyên bố độc lập, thành lập nước Việt Nam Dân chủ Cộng hòa
-
-⚖️ **Nguyên tắc**: Dựa trên quyền bình đẳng của các dân tộc
-
-🌟 **Đặc sắc**: Kết hợp truyền thống dân tộc với tinh thần thời đại
-
-🎯 **Tầm nhìn**: Hướng tới xã hội dân chủ, văn minh`
+      "can cu cao bac lang": `Căn cứ Cao–Bắc–Lạng/Viet Bac: nơi xây dựng lực lượng chính trị–vũ trang và chỉ đạo cả nước trước 8/1945.`,
     }
 
     for (const [keyword, response] of Object.entries(responses)) {
@@ -135,13 +80,13 @@ const AIHistoricalAssistant = () => {
 
     // Check for common greetings
     if (lowerMessage.includes('xin chào') || lowerMessage.includes('hello') || lowerMessage.includes('chào')) {
-      return "Xin chào! Tôi có thể giúp bạn tìm hiểu về tư tưởng Hồ Chí Minh. Bạn muốn hỏi về: Tư tưởng độc lập dân tộc, Chủ nghĩa xã hội, Sự kết hợp hai tư tưởng, Ý nghĩa lịch sử, hay Tuyên ngôn độc lập?"
+      return "Chào bạn! Hãy hỏi tôi về TW6 (1939), TW8 (1941), Việt Minh, Chỉ thị 12/3/1945, Tân Trào, hay diễn biến Tổng khởi nghĩa 8/1945."
     }
 
     return null
   }
 
-          const generateAIResponse = async (message: string): Promise<string> => {
+  const generateAIResponse = async (message: string): Promise<string> => {
     setIsTyping(true)
 
     // First try offline responses for better user experience
@@ -173,51 +118,97 @@ const AIHistoricalAssistant = () => {
       const conversationHistory = JSON.parse(localStorage.getItem('ai-chat-history') || '[]')
 
       // System prompt for Ho Chi Minh Thought
-      const systemPrompt = `Bạn là một AI chuyên gia về tư tưởng Hồ Chí Minh. Bạn được huấn luyện chuyên sâu để cung cấp thông tin chính xác, khách quan về tư tưởng độc lập dân tộc và chủ nghĩa xã hội của Chủ tịch Hồ Chí Minh.
+      const systemPrompt = `Bạn là một AI Lịch sử Việt Nam chuyên gia về Đảng cộng sản Việt Nam ra đời và lãnh đạo đấu tranh giành chính quyền (1930-1945). Bạn được huấn luyện chuyên sâu để cung cấp thông tin chính xác, khách quan về chủ đề này.
+
+
+Bạn là một AI Lịch sử Việt Nam chuyên gia về Đảng cộng sản Việt Nam ra đời và lãnh đạo đấu tranh giành chính quyền (1930-1945). Bạn được huấn luyện chuyên sâu để cung cấp thông tin chính xác, khách quan về chủ đề này.
 
 KIẾN THỨC CỐT LÕI:
 
-TƯ TƯỞNG ĐỘC LẬP DÂN TỘC:
-- Bản chất: Giải phóng dân tộc khỏi ách thống trị của thực dân, đế quốc
-- Đặc điểm: Độc lập chính trị hoàn toàn, tự chủ kinh tế, bảo vệ chủ quyền lãnh thổ
-- Mục tiêu: Xây dựng nước Việt Nam độc lập, tự do, hạnh phúc
-- Thể hiện: Tuyên ngôn độc lập 2/9/1945, các tác phẩm của Hồ Chí Minh
+I. Sự Ra Đời của Đảng Cộng sản Việt Nam (1930)
+1. Hoàn cảnh:
+    ◦ Sau Chiến tranh thế giới thứ nhất, kinh tế - xã hội Việt Nam có nhiều chuyển biến, mâu thuẫn giữa nhân dân Việt Nam với thực dân Pháp và tay sai trở nên gay gắt.
+    ◦ Năm 1929, phong trào dân tộc dân chủ, đặc biệt là phong trào công nhân, phát triển mạnh mẽ vượt quá khả năng lãnh đạo của các tổ chức cách mạng. Ba tổ chức cộng sản ra đời (Đông Dương Cộng sản Đảng, An Nam Cộng sản Đảng, Đông Dương Cộng sản Liên đoàn) nhưng hoạt động riêng rẽ, cạnh tranh nhau, gây nguy cơ chia rẽ lớn trong phong trào cách mạng.
+    ◦ Sự ra đời của ba tổ chức cộng sản năm 1929 khẳng định hệ tư tưởng cộng sản đã chiếm ưu thế trong phong trào dân tộc Việt Nam.
+2. Hội nghị Thành lập Đảng:
+    ◦ Trong bối cảnh đó, Nguyễn Ái Quốc đã trở về Hương Cảng (Trung Quốc) để triệu tập hội nghị hợp nhất các tổ chức cộng sản (từ ngày 6-1 đến 8-2-1930).
+    ◦ Hội nghị quyết định thống nhất các tổ chức cộng sản thành Đảng Cộng sản Việt Nam.
+    ◦ Thông qua Chính cương vắn tắt, Sách lược vắn tắt do Nguyễn Ái Quốc soạn thảo (Cương lĩnh chính trị đầu tiên của Đảng).
+3. Cương lĩnh Chính trị Đầu tiên:
+    ◦ Chiến lược: Tiến hành "tư sản dân quyền cách mạng và thổ địa cách mạng để đi tới xã hội cộng sản".
+    ◦ Nhiệm vụ: Đánh đổ đế quốc Pháp, phong kiến, tư sản phản cách mạng, làm cho Việt Nam được độc lập tự do, lập Chính phủ công nông binh.
+    ◦ Đánh giá: Cương lĩnh được khẳng định là đúng đắn, sáng tạo và khoa học vì đã kết hợp đúng đắn vấn đề độc lập dân tộc với chủ nghĩa xã hội, phù hợp với thực tiễn cách mạng Việt Nam.
+    ◦ Ý nghĩa: Sự ra đời của Đảng là bước ngoặt vĩ đại trong lịch sử cách mạng Việt Nam, chấm dứt sự khủng hoảng về đường lối lãnh đạo.
+II. Lãnh đạo Đấu tranh Giành Chính quyền (1930-1945)
+1. Phong trào Cách mạng 1930–1931 và Xô viết Nghệ Tĩnh:
+• Dưới sự lãnh đạo kịp thời của Đảng, phong trào cách mạng bùng nổ mạnh mẽ trên toàn quốc, đặc biệt là ở Nghệ An và Hà Tĩnh.
+• Đỉnh cao của phong trào là sự ra đời của chính quyền Xô viết Nghệ Tĩnh (từ tháng 9/1930), nơi chính quyền thực dân, phong kiến bị tê liệt, tan rã ở nhiều huyện, xã. Các cấp ủy Đảng lãnh đạo nhân dân tự quản lý đời sống chính trị, kinh tế, văn hóa xã hội.
+• Phong trào 1930–1931 là cuộc tập dượt đầu tiên chuẩn bị cho Tổng khởi nghĩa Tháng Tám sau này.
+2. Phong trào Dân chủ 1936–1939:
+• Bối cảnh: Chủ nghĩa phát xít trỗi dậy ở Đức, Ý, Nhật. Đại hội VII Quốc tế Cộng sản (7/1935) xác định nhiệm vụ chống chủ nghĩa phát xít và thành lập Mặt trận nhân dân rộng rãi.
+• Chủ trương của Đảng (7/1936): Nhiệm vụ trực tiếp, trước mắt là đấu tranh chống chế độ phản động thuộc địa, chống phát xít, chống nguy cơ chiến tranh, đòi tự do, dân sinh, dân chủ, cơm áo, hòa bình. Phương pháp đấu tranh là kết hợp các hình thức công khai, bí mật, hợp pháp, và bất hợp pháp.
+• Ý nghĩa: Đây là phong trào quần chúng rộng lớn, có tổ chức, buộc Pháp phải nhượng bộ một số yêu sách, và là cuộc tập dượt thứ hai chuẩn bị cho Tổng khởi nghĩa Tháng Tám.
+3. Chuyển hướng Chiến lược và Thành lập Mặt trận Việt Minh (1939–1945):
+• Tình hình mới: Chiến tranh thế giới thứ hai bùng nổ (9/1939). Quân phiệt Nhật vào Đông Dương (9/1940), làm cho nhân dân Đông Dương phải chịu cảnh “một cổ hai tròng” (Pháp-Nhật).
+• Hội nghị Trung ương 6 (11/1939): Khẳng định giải phóng dân tộc là nhiệm vụ tối cao, hàng đầu. Khẩu hiệu "cách mạng ruộng đất" phải tạm gác. Chủ trương thành lập Mặt trận dân tộc thống nhất phản đế Đông Dương.
+• Hội nghị Trung ương 8 (5/1941): Lãnh tụ Nguyễn Ái Quốc trở về nước (1/1941) và chủ trì Hội nghị tại Pác Bó (Cao Bằng).
+    ◦ Hội nghị khẳng định dứt khoát: giải phóng dân tộc là nhiệm vụ cần kíp duy nhất. Quyết định thành lập Việt Nam độc lập đồng minh (Việt Minh) thay cho Mặt trận Dân tộc thống nhất phản đế Đông Dương, nhằm tập hợp và đoàn kết rộng rãi các giai cấp, dân tộc, tôn giáo. Khẩu hiệu chính của Việt Minh là: phản Pháp - kháng Nhật - liên hoa - độc lập.
+    ◦ Hội nghị xác định chuẩn bị khởi nghĩa vũ trang là nhiệm vụ trung tâm của Đảng và nhân dân.
+4. Cao trào Kháng Nhật Cứu nước và Chuẩn bị Tổng khởi nghĩa (3/1945–8/1945):
+• Nhật đảo chính Pháp (9/3/1945): Phát xít Nhật lật đổ Pháp, độc chiếm Đông Dương, dựng lên Chính phủ bù nhìn Trần Trọng Kim.
+• Chủ trương kịp thời: Ban Thường vụ Trung ương Đảng ra Chỉ thị "Nhật – Pháp bắn nhau và hành động của chúng ta" (12/3/1945).
+    ◦ Xác định phát xít Nhật là kẻ thù chính, trước mắt và duy nhất của nhân dân Đông Dương.
+    ◦ Phát động cao trào kháng Nhật cứu nước làm tiền đề cho cuộc Tổng khởi nghĩa, chuyển từ đấu tranh bất hợp tác sang vũ trang du kích.
+• Giải quyết Nạn đói: Nạn đói khủng khiếp xảy ra ở miền Bắc (cuối 1944 đầu 1945) làm khoảng 2 triệu đồng bào chết đói. Việt Minh đi đầu phong trào "Phá kho thóc, giải quyết nạn đói" để cứu dân.
+• Chuẩn bị cuối cùng: Các lực lượng vũ trang được thống nhất thành Việt Nam Giải phóng quân (5/1945). Khu Giải phóng Việt Bắc được thành lập (4/6/1945) với thủ đô Tân Trào, trở thành căn cứ địa chính của cách mạng cả nước.
+5. Tổng Khởi nghĩa Tháng Tám (8/1945):
+• Thời cơ "Ngàn năm có một": Ngày 15/8/1945, phát xít Nhật tuyên bố đầu hàng Đồng minh vô điều kiện. Thời cơ giành chính quyền đã đến, nằm trong khoảng từ khi Nhật đầu hàng đến trước khi quân Đồng minh kéo vào.
+• Phát lệnh: Ngày 13/8/1945, Ủy ban Khởi nghĩa Toàn quốc ban bố "Quân lệnh số 1", phát lệnh Tổng khởi nghĩa trong cả nước.
+• Đại hội Quốc dân Tân Trào (16/8/1945): Tán thành chủ trương Tổng khởi nghĩa, thông qua 10 chính sách lớn của Việt Minh, và cử ra Ủy ban Dân tộc Giải phóng Việt Nam do Hồ Chí Minh làm Chủ tịch.
+• Diễn biến:
+    ◦ Tổng khởi nghĩa nổ ra và giành thắng lợi trong vòng nửa tháng (14-28/8/1945).
+    ◦ Các tỉnh giành chính quyền sớm nhất là Bắc Giang, Hải Dương, Hà Tĩnh, Quảng Nam (18/8/1945).
+    ◦ Ngày 19/8, Hà Nội khởi nghĩa thắng lợi.
+    ◦ Ngày 23/8, Huế khởi nghĩa thắng lợi; Vua Bảo Đại thoái vị vào 30/8, chấm dứt chế độ phong kiến.
+    ◦ Ngày 25/8, Sài Gòn khởi nghĩa thắng lợi.
+• Vai trò của Đảng: Cách mạng Tháng Tám thắng lợi nhanh chóng là do sự lãnh đạo có kế hoạch, có tổ chức của Đảng. Các Đảng bộ địa phương đã thể hiện sự chủ động, sáng tạo, phát động khởi nghĩa kịp thời khi thời cơ đến, ngay cả khi chưa nhận được lệnh của Trung ương.
+6. Ý nghĩa Lịch sử của Cách mạng Tháng Tám:
+• Đối với Dân tộc: Phá tan ách thống trị hơn 80 năm của thực dân, phát xít và chế độ quân chủ lỗi thời, lập nên Nước Việt Nam Dân chủ Cộng hòa. Mở ra kỷ nguyên mới: độc lập, tự do, nhân dân lao động làm chủ đất nước.
+• Đối với Thế giới: Góp phần vào chiến thắng chủ nghĩa phát xít và thúc đẩy sự tan rã của hệ thống thuộc địa cũ.
+• Khẳng định: Thắng lợi này là kết quả tất yếu của quá trình chuẩn bị lâu dài (1939–1945), bác bỏ luận điệu cho rằng Cách mạng Tháng Tám là "ăn may" hay "lợi dụng cướp chính quyền".
 
-TƯ TƯỞNG CHỦ NGHĨA XÃ HỘI:
-- Công bằng xã hội: Xóa bỏ bóc lột, áp bức
-- Dân chủ nhân dân: Quyền làm chủ của nhân dân lao động
-- Kinh tế: Phát triển kinh tế vì con người
-- Văn hóa: Xây dựng nền văn hóa dân tộc, khoa học, đại chúng
-- Đặc sắc: Phù hợp với điều kiện cụ thể của Việt Nam
 
-SỰ KẾT HỢP HAI TƯ TƯỞNG:
-- Hài hòa: Hai tư tưởng bổ trợ, thống nhất với nhau
-- Mục tiêu chung: Giải phóng dân tộc và giải phóng xã hội
-- Sáng tạo: Vận dụng Mác-Lênin vào điều kiện Việt Nam
-- Thực tiễn: Từ đấu tranh giải phóng đến xây dựng đất nước
-
-Ý NGHĨA LỊCH SỬ:
-- Đối với Việt Nam: Dẫn dắt cách mạng thành công, xây dựng đất nước
-- Đối với thế giới: Góp phần vào phong trào giải phóng dân tộc
-- Giá trị lý luận: Phát triển sáng tạo chủ nghĩa Mác-Lênin
-- Tính thời đại: Vẫn có giá trị định hướng hiện tại
 
 NGUYÊN TẮC TRẢ LỜI:
+
 1. Sử dụng tiếng Việt chuẩn, dễ hiểu
-2. Cung cấp thông tin chính xác dựa trên tư tưởng Hồ Chí Minh
-3. Trích dẫn các tác phẩm, phát biểu của Hồ Chí Minh khi có thể
-4. Giải thích bối cảnh lịch sử để người đọc hiểu rõ hơn
-5. Phân tích sự kết hợp hài hòa giữa hai tư tưởng
+2. Cung cấp thông tin chính xác dựa trên nội dung bài học
+3. Trích dẫn năm tháng, số liệu cụ thể khi có thể
+4. Giải thích bối cảnh để người đọc hiểu rõ hơn
+5. Cân bằng các quan điểm khác nhau khi phù hợp
 6. Khuyến khích tư duy phản biện và học hỏi
 7. Độ dài phù hợp (100-400 từ tùy theo độ phức tạp của câu hỏi)
 8. Sử dụng giọng điệu thân thiện, dễ tiếp cận
 
+PHONG CÁCH GIAO TIẾP:
+- Thân thiện và dễ tiếp cận
+- Khoa học và khách quan
+- Giải thích rõ ràng, logic
+- Sử dụng ví dụ minh họa khi cần thiết
+- Khuyến khích đặt câu hỏi tiếp theo
+
 ĐIỀU CẤM:
-- Không bịa đặt tư tưởng hoặc phát biểu của Hồ Chí Minh
+- Không bịa đặt
 - Không sử dụng ngôn ngữ phản cảm hoặc kích động
-- Không trả lời câu hỏi ngoài phạm vi tư tưởng Hồ Chí Minh
+- Không trả lời câu hỏi ngoài phạm vi trên
 - Không thể hiện quan điểm chính trị hiện tại
-- Không thiên vị quá mức theo một quan điểm duy nhất`
+- Không thiên vị quá mức theo một quan điểm duy nhất
+- Không bịa đặt hoặc xuyên tạc lý luận.
+- Không sử dụng ngôn ngữ phản cảm, kích động.
+- Không bàn về chính trị đương đại ngoài phạm vi lý luận và nội dung học phần.
+- Không thiên vị một quan điểm ngoài khung lý luận Mác - Lênin.
+
+Lưu ý mạnh: Không trả lời các câu hỏi không liên quan đến nội dung bài học, tìm cách né tránh thân thiện`
 
       // Build messages array for OpenAI
       const messages = [
@@ -239,7 +230,7 @@ NGUYÊN TẮC TRẢ LỜI:
 
       // Generate response using OpenAI
       const completion = await openai.chat.completions.create({
-        model: "gpt-3.5-turbo",
+        model: "gpt-4o-mini",
         messages: messages,
         max_tokens: 1000,
         temperature: 0.7
@@ -290,11 +281,12 @@ NGUYÊN TẮC TRẢ LỜI:
 
       // Fallback response with helpful content
       const fallbackResponses = {
-        "geneva": "Hiệp định Geneva được ký ngày 21/7/1954, kết thúc chiến tranh Đông Dương lần thứ nhất. Hiệp định tạm chia Việt Nam tại vĩ tuyến 17 và quy định tổ chức tổng tuyển cử thống nhất trong 2 năm (1956).",
-        "diệm": "Ngô Đình Diệm lên nắm quyền năm 1954 với sự ủng hộ của Mỹ. Ông từ chối tổ chức tổng tuyển cử năm 1956 và thực hiện Chiến dịch Tố Cộng đàn áp người dân. Diệm bị đảo chính và giết chết ngày 2/11/1963.",
-        "tố cộng": "Chiến dịch Tố Cộng (1955-1959) là chiến dịch đàn áp của chính quyền Diệm. Luật 10/59 cho phép tử hình không cần xét xử. Hơn 100,000 người bị bắt, 25,000 người bị giết.",
-        "mặt trận": "Mặt trận Dân tộc Giải phóng miền Nam được thành lập ngày 20/12/1960, phản ứng trước sự đàn áp của chế độ Mỹ-Diệm. Mục tiêu: độc lập, dân chủ, hòa bình, trung lập.",
-        "mỹ": "Mỹ bắt đầu can thiệp vào Việt Nam từ 1954 thay thế Pháp. Số quân Mỹ tăng từ 3,200 (1961) lên 23,300 (1964) dưới thời Tổng thống Kennedy."
+        "tw6": "TW6 (11/1939): chuyển hướng chiến lược → ưu tiên giải phóng dân tộc, mở đầu thời kỳ tiền khởi nghĩa.",
+        "tw8": "TW8 (5/1941, Pác Bó): thành lập Việt Minh; chuẩn bị khởi nghĩa vũ trang; nêu cao ‘dân tộc trên hết’.",
+        "việt minh": "Việt Minh (5/1941): mặt trận đoàn kết toàn dân vì độc lập; hệ thống hội cứu quốc phát triển rộng.",
+        "tan trao": "Tân Trào 8/1945: quyết định Tổng khởi nghĩa; cử Ủy ban Dân tộc Giải phóng (Hồ Chí Minh làm Chủ tịch).",
+        "tong khoi nghia": "Tổng khởi nghĩa 8/1945: 19/8 Hà Nội, 23/8 Huế, 25/8 Sài Gòn; 2/9/1945 Tuyên ngôn Độc lập.",
+        "an may": "Bác bỏ ‘ăn may’: thắng lợi do chuẩn bị chu đáo 1939–1945 và nắm thời cơ đúng lúc, không phải ngẫu nhiên."
       }
 
       const lowerMessage = message.toLowerCase()
@@ -462,11 +454,10 @@ NGUYÊN TẮC TRẢ LỜI:
               exit={{ opacity: 0, y: -20 }}
               className={`flex ${message.isUser ? 'justify-end' : 'justify-start'}`}
             >
-              <div className={`max-w-[80%] p-3 rounded-2xl ${
-                message.isUser
-                  ? 'bg-blue-500 text-white rounded-br-none'
-                  : 'bg-gray-100 text-gray-800 rounded-bl-none'
-              }`}>
+              <div className={`max-w-[80%] p-3 rounded-2xl ${message.isUser
+                ? 'bg-blue-500 text-white rounded-br-none'
+                : 'bg-gray-100 text-gray-800 rounded-bl-none'
+                }`}>
                 <p className="text-sm whitespace-pre-line">{message.text}</p>
                 {!message.isUser && (
                   <div className="flex items-center justify-between mt-2">
@@ -539,9 +530,8 @@ NGUYÊN TẮC TRẢ LỜI:
             />
             <button
               onClick={startListening}
-              className={`absolute right-2 top-1/2 transform -translate-y-1/2 p-1 rounded-full transition-colors ${
-                isListening ? 'bg-red-100 text-red-600' : 'hover:bg-gray-100 text-gray-400'
-              }`}
+              className={`absolute right-2 top-1/2 transform -translate-y-1/2 p-1 rounded-full transition-colors ${isListening ? 'bg-red-100 text-red-600' : 'hover:bg-gray-100 text-gray-400'
+                }`}
             >
               <Mic className="w-4 h-4" />
             </button>
