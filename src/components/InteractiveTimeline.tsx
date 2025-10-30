@@ -7,6 +7,7 @@ const InteractiveTimeline = () => {
   const [isPlaying, setIsPlaying] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [showAiInsights, setShowAiInsights] = useState(false)
+  const [viewMode, setViewMode] = useState<'interactive' | 'table'>('table')
   const intervalRef = useRef<number | null>(null)
 
   const currentEvent = timelineEvents[currentIndex]
@@ -58,13 +59,27 @@ const InteractiveTimeline = () => {
   }
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
+    <div className="bg-white rounded-2xl shadow-xl p-6 border border-gray-200">
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-2xl font-bold text-gray-900 flex items-center">
           <Zap className="w-6 h-6 mr-2 text-blue-600" />
           Timeline AI Interactive
         </h3>
         <div className="flex items-center space-x-3">
+            <div className="hidden sm:flex items-center space-x-2 mr-2">
+              <button
+                onClick={() => setViewMode('table')}
+                className={`px-3 py-1 rounded-md text-sm font-medium ${
+                  viewMode === 'table' ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-700'
+                }`}
+              >Bảng</button>
+              <button
+                onClick={() => setViewMode('interactive')}
+                className={`px-3 py-1 rounded-md text-sm font-medium ${
+                  viewMode === 'interactive' ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-700'
+                }`}
+              >Tương tác</button>
+            </div>
           <button
             onClick={() => setShowAiInsights(!showAiInsights)}
             className={`p-2 rounded-lg transition-colors duration-200 ${
@@ -103,71 +118,144 @@ const InteractiveTimeline = () => {
           </button>
         </div>
       </div>
-
-      {/* Progress Bar */}
-      <div className="mb-8">
-        <div className="flex justify-between text-sm text-gray-600 mb-2">
-          <span>Tiến độ</span>
-          <span>{currentIndex + 1} / {timelineEvents.length}</span>
+      {/* Table view (default) */}
+      {viewMode === 'table' ? (
+        <div className="overflow-x-auto">
+          <table className="min-w-full divide-y divide-gray-200">
+            <thead className="bg-gray-50">
+              <tr>
+                <th className="px-4 py-3 text-left text-sm font-medium text-gray-700">Thời gian</th>
+                <th className="px-4 py-3 text-left text-sm font-medium text-gray-700">Sự kiện lịch sử quan trọng</th>
+                <th className="px-4 py-3 text-left text-sm font-medium text-gray-700">Địa điểm / Lực lượng</th>
+                <th className="px-4 py-3 text-left text-sm font-medium text-gray-700">Ý nghĩa – Tác động</th>
+              </tr>
+            </thead>
+            <tbody className="bg-white divide-y divide-gray-100">
+              {timelineEvents.map((ev, idx) => {
+                // extract location and impact from details when possible
+                const loc = ev.details.find((d) => d.toLowerCase().startsWith('địa điểm')) || ev.details[0] || ''
+                const impact = ev.details.find((d) => d.toLowerCase().startsWith('ý nghĩa')) || ev.details[1] || ''
+                return (
+                  <tr key={ev.id} className={idx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                    <td className="px-4 py-4 align-top text-sm text-gray-700 font-medium w-32">{ev.date}</td>
+                    <td className="px-4 py-4 align-top text-sm text-gray-800">
+                      <div className="font-semibold">{ev.title}</div>
+                      <div className="text-gray-600 mt-1">{ev.description}</div>
+                    </td>
+                    <td className="px-4 py-4 align-top text-sm text-gray-700 whitespace-pre-wrap">{loc}</td>
+                    <td className="px-4 py-4 align-top text-sm text-gray-700 whitespace-pre-wrap">{impact}</td>
+                  </tr>
+                )
+              })}
+            </tbody>
+          </table>
         </div>
-        <div className="w-full bg-gray-200 rounded-full h-2">
-          <motion.div
-            className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full"
-            initial={{ width: 0 }}
-            animate={{ width: `${((currentIndex + 1) / timelineEvents.length) * 100}%` }}
-            transition={{ duration: 0.5 }}
-          />
-        </div>
-      </div>
-
-      {/* Current Event Display */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={currentIndex}
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -50 }}
-          transition={{ duration: 0.5 }}
-          className="mb-6"
-        >
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 border border-blue-200">
-            <div className="flex items-center justify-between mb-4">
-              <div className="text-sm font-medium text-blue-600">
-                {currentEvent.date}
-              </div>
-              <div className={`px-3 py-1 rounded-full text-xs font-medium ${
-                'bg-green-100 text-green-700'
-              }`}>
-                Quan trọng
-              </div>
+      ) : (
+        <>
+          {/* Progress Bar */}
+          <div className="mb-8">
+            <div className="flex justify-between text-sm text-gray-600 mb-2">
+              <span>Tiến độ</span>
+              <span>{currentIndex + 1} / {timelineEvents.length}</span>
             </div>
-            <h4 className="text-xl font-bold text-gray-900 mb-3">
-              {currentEvent.title}
-            </h4>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              {currentEvent.description}
-            </p>
-
-            {/* Details */}
-            <div className="space-y-2">
-              <h5 className="font-semibold text-gray-900">Chi tiết:</h5>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                {currentEvent.details.slice(0, 4).map((detail, index) => (
-                  <li key={index} className="flex items-start space-x-2 text-sm text-gray-600">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-1.5 flex-shrink-0"></div>
-                    <span>{detail}</span>
-                  </li>
-                ))}
-              </ul>
-              {currentEvent.details.length > 4 && (
-                <p className="text-sm text-gray-500 italic">
-                  Và {currentEvent.details.length - 4} điểm khác...
-                </p>
-              )}
+            <div className="w-full bg-gray-200 rounded-full h-2">
+              <motion.div
+                className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full"
+                initial={{ width: 0 }}
+                animate={{ width: `${((currentIndex + 1) / timelineEvents.length) * 100}%` }}
+                transition={{ duration: 0.5 }}
+              />
             </div>
           </div>
-        </motion.div>
-      </AnimatePresence>
+
+          {/* Current Event Display */}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentIndex}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -50 }}
+              transition={{ duration: 0.5 }}
+              className="mb-6"
+            >
+              <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 border border-blue-200">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="text-sm font-medium text-blue-600">
+                    {currentEvent.date}
+                  </div>
+                  <div className={`px-3 py-1 rounded-full text-xs font-medium ${
+                    'bg-green-100 text-green-700'
+                  }`}>
+                    Quan trọng
+                  </div>
+                </div>
+                <h4 className="text-xl font-bold text-gray-900 mb-3">
+                  {currentEvent.title}
+                </h4>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  {currentEvent.description}
+                </p>
+
+                {/* Details */}
+                <div className="space-y-2">
+                  <h5 className="font-semibold text-gray-900">Chi tiết:</h5>
+                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    {currentEvent.details.slice(0, 4).map((detail, index) => (
+                      <li key={index} className="flex items-start space-x-2 text-sm text-gray-600">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full mt-1.5 flex-shrink-0"></div>
+                        <span>{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  {currentEvent.details.length > 4 && (
+                    <p className="text-sm text-gray-500 italic">
+                      Và {currentEvent.details.length - 4} điểm khác...
+                    </p>
+                  )}
+                </div>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+
+          {/* AI Insights */}
+          <AnimatePresence>
+            {showAiInsights && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.3 }}
+                className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-200"
+              >
+                <div className="flex items-center space-x-3 mb-3">
+                  <Zap className="w-5 h-5 text-purple-600" />
+                  <h5 className="font-semibold text-purple-900">AI Insight</h5>
+                </div>
+                <p className="text-purple-800 leading-relaxed">
+                  {generateAiInsight(currentEvent)}
+                </p>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          {/* Navigation Dots */}
+          <div className="flex justify-center space-x-2 mt-6">
+            {timelineEvents.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentIndex
+                    ? 'bg-blue-500 scale-125'
+                    : index < currentIndex
+                    ? 'bg-blue-300'
+                    : 'bg-gray-300'
+                }`}
+              />
+            ))}
+          </div>
+        </>
+      )}
 
       {/* AI Insights */}
       <AnimatePresence>
