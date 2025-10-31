@@ -498,20 +498,6 @@ export const quizQuestions: QuizQuestion[] = [
   },
   {
     "id": 54,
-    "question": "Nếu có mạng xã hội năm 1945, khẩu hiệu nào theo bạn sẽ 'trend' nhất?",
-    "options": [
-      "#ĐộcLậpDânTộc",
-      "#CơmÁoHòaBình",
-      "#ViệtMinhMuônNăm",
-      "#ThoátKhỏiPhápNhật"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Chắc chắn #ĐộcLậpDânTộc sẽ hot nhất vì đó là khát vọng cháy bỏng của người Việt lúc bấy giờ.",
-    "category": "mo-bai-vui",
-    "difficulty": "easy"
-  },
-  {
-    "id": 55,
     "question": "Nếu bạn là người dân năm 1945 nghe tin Nhật đầu hàng Đồng minh, bạn sẽ cảm thấy thế nào?",
     "options": [
       "Mừng rỡ vì sắp được độc lập!",
@@ -525,7 +511,7 @@ export const quizQuestions: QuizQuestion[] = [
     "difficulty": "easy"
   },
   {
-    "id": 56,
+    "id": 55,
     "question": "Nếu bạn được quay ngược thời gian về năm 1945, điều đầu tiên bạn muốn làm là gì?",
     "options": [
       "Tham gia khởi nghĩa giành chính quyền",
@@ -535,6 +521,20 @@ export const quizQuestions: QuizQuestion[] = [
     ],
     "correctAnswer": 0,
     "explanation": "Dù chọn gì, chắc ai cũng muốn chứng kiến khoảnh khắc thiêng liêng của Cách mạng Tháng Tám.",
+    "category": "mo-bai-vui",
+    "difficulty": "easy"
+  },
+  {
+    "id": 56,
+    "question": "Nếu có mạng xã hội năm 1945, khẩu hiệu nào theo bạn sẽ 'trend' nhất?",
+    "options": [
+      "#ĐộcLậpDânTộc",
+      "#CơmÁoHòaBình",
+      "#ViệtMinhMuônNăm",
+      "#ThoátKhỏiPhápNhật"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Chắc chắn #ĐộcLậpDânTộc sẽ hot nhất vì đó là khát vọng cháy bỏng của người Việt lúc bấy giờ.",
     "category": "mo-bai-vui",
     "difficulty": "easy"
   }
