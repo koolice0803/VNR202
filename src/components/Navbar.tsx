@@ -4,8 +4,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import {
   Home,
   Clock,
-  BarChart3,
-  FileText,
   BookOpen,
   Menu,
   X,
